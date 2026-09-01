@@ -385,4 +385,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-01,822854,2026-09-01,Texas Rangers,669022,MacKenzie Gore,1,0.7617973271545371,Regresion logistica,0.7,1.5835622610987976,Regresion lineal,1.6,2.184613220781219,Gradient Boosting,2.9,,,,False
 2026-09-01,822854,2026-09-01,Athletics,669620,Brady Basso,0,0.7441719383647665,Regresion logistica,0.6666666666666666,2.1727317377174704,Regresion lineal,1.3333333333333333,3.2209847040744624,Gradient Boosting,2.0,,,,False
 2026-09-01,823908,2026-09-01,St. Louis Cardinals,700241,Michael McGreevy,0,0.6381729071299275,Regresion logistica,0.6,1.7111456398707108,Regresion lineal,2.2,2.7211286301284154,Gradient Boosting,3.0,,,,False
-2026-09-01,823908,2026-09-01,Los Angeles Dodgers,641778,Eric Lauer,1,0.7708352023471917,Regresion logistica,0.5,0.9968044518253083,Regresion lineal,2.0,1.6587690193394906,Gradient Boosting,2.7,,,,False
+2026-09-01,823908,2026-09-01,Los Angeles Dodgers,641778,Eric Lauer,1,0.7708352023471917,Regresion logistica,0.5,0.9968044518253084,Regresion lineal,2.0,1.6587690193394906,Gradient Boosting,2.7,,,,False
+2026-09-01,822929,2026-09-01,New York Mets,640455,Sean Manaea,0,0.6665659768927424,Regresion logistica,0.7,1.245896488312548,Regresion lineal,1.4,2.927307832774759,Gradient Boosting,2.2,,,,False
+2026-09-01,822929,2026-09-01,Tampa Bay Rays,642547,Freddy Peralta,1,0.6966944413357206,Regresion logistica,0.5,1.3268668518134532,Regresion lineal,2.4,2.4320379965511156,Gradient Boosting,3.6,,,,False
