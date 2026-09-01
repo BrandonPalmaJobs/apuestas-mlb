@@ -43,4 +43,9 @@ jobs:
           git add model*.joblib* training_data.csv training_history.csv \
                   training_history_matchup.csv predictions_log.csv
           git diff --cached --quiet || git commit -m "Reentrenamiento automatico (GitHub Actions) $(date -u +%Y-%m-%d)"
+          # Si alguien mas subio un commit mientras esto corria (20-45 min),
+          # un push directo se rechaza (non-fast-forward). Rebase encima de
+          # lo mas reciente antes de subir - sin conflicto real posible aqui
+          # porque este job es el unico que toca estos archivos de datos.
+          git pull --rebase origin main
           git push
