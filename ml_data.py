@@ -65,9 +65,21 @@ def get_game_weather_cached(gamePk):
     antes del primer pitch, no una fuga del resultado del juego)."""
     if gamePk in _WEATHER_CACHE:
         return _WEATHER_CACHE[gamePk]
-    r = m.requests.get(f"https://statsapi.mlb.com/api/v1.1/game/{gamePk}/feed/live", timeout=15)
-    r.raise_for_status()
-    data = r.json()
+    url = f"https://statsapi.mlb.com/api/v1.1/game/{gamePk}/feed/live"
+    last_err = None
+    data = None
+    for attempt in range(3):
+        try:
+            r = m.requests.get(url, timeout=15)
+            r.raise_for_status()
+            data = r.json()
+            break
+        except (m.requests.exceptions.ConnectionError, m.requests.exceptions.Timeout) as e:
+            last_err = e
+            if attempt < 2:
+                time.sleep(1.5 * (attempt + 1))
+    if data is None:
+        raise last_err
     gd = data.get("gameData", {})
     weather = gd.get("weather", {}) or {}
     field_info = gd.get("venue", {}).get("fieldInfo", {}) or {}
@@ -546,10 +558,24 @@ def enrich_with_weather(df, verbose=True):
     unique_pks = df["gamePk"].unique()
     t0 = time.time()
     weather_by_pk = {}
+    skipped = 0
     for i, pk in enumerate(unique_pks):
-        weather_by_pk[pk] = get_game_weather_cached(int(pk))
+        # Un try/except por juego: con ~1800+ requests seguidos a la API en
+        # este paso, es cuestion de tiempo que uno se quede sin respuesta
+        # aunque ya tenga reintentos - sin esto, ese juego tumbaba todo el
+        # paso y se perdian los otros 1000+ ya descargados.
+        try:
+            weather_by_pk[pk] = get_game_weather_cached(int(pk))
+        except Exception as e:
+            skipped += 1
+            weather_by_pk[pk] = {"game_temp_f": None, "game_wind_mph": None,
+                                  "game_wind_effect": None, "game_is_indoor": None}
+            print(f"  [salteado] gamePk {pk}: {e}", file=sys.stderr)
         if verbose and (i + 1) % 200 == 0:
             print(f"  clima: {i+1}/{len(unique_pks)} juegos ({time.time()-t0:.0f}s)", file=sys.stderr)
+    if skipped:
+        print(f"  Total de juegos salteados por error: {skipped} (se quedan sin clima, el resto de "
+              f"columnas no se ve afectado)", file=sys.stderr)
     weather_df = pd.DataFrame.from_dict(weather_by_pk, orient="index")
     weather_df.index.name = "gamePk"
     return df.merge(weather_df, on="gamePk", how="left")
