@@ -468,7 +468,7 @@ def lineup_batting_avg(players, season):
         avg = float(stat["avg"]) if stat.get("avg") not in (None, "") else None
         total_ab += ab
         total_hits += hits
-        detail.append({"name": person.get("fullName"), "avg": avg, "ab": ab})
+        detail.append({"id": person.get("id"), "name": person.get("fullName"), "avg": avg, "ab": ab})
     avg = (total_hits / total_ab) if total_ab else None
     return avg, detail
 
@@ -685,6 +685,79 @@ def get_team_vs_hand_split(team_id, season, pitcher_hand):
         result = None
     _VS_HAND_CACHE[key] = result
     return result
+
+
+_PLAYER_VS_HAND_CACHE = {}
+
+
+def get_player_vs_hand_split(player_id, season, pitcher_hand):
+    """Version por jugador de get_team_vs_hand_split: AVG/OPS de ESTE
+    bateador especificamente contra pitcheo de esa mano en toda la
+    temporada. Solo tiene sentido pedirlo para el lineup CONFIRMADO de
+    hoy (9 llamadas por equipo), no para el equipo completo."""
+    if pitcher_hand not in ("L", "R"):
+        return None
+    key = (player_id, season, pitcher_hand)
+    if key in _PLAYER_VS_HAND_CACHE:
+        return _PLAYER_VS_HAND_CACHE[key]
+    sit_code = "vl" if pitcher_hand == "L" else "vr"
+    result = None
+    try:
+        data = get_json(f"/people/{player_id}/stats",
+                         {"stats": "statSplits", "group": "hitting", "season": season, "sitCodes": sit_code})
+        s = data["stats"][0]["splits"][0]["stat"]
+        result = {"avg": float(s["avg"]), "ops": float(s["ops"])}
+    except (KeyError, IndexError, ValueError, TypeError):
+        result = None
+    _PLAYER_VS_HAND_CACHE[key] = result
+    return result
+
+
+def get_player_last_n_games(player_id, season, n=5):
+    """Ultimos n juegos de bateo de este jugador en la temporada actual
+    (fecha, turnos al bat, hits) - para ver si viene 'caliente' o 'frio'
+    mas alla de su AVG de toda la temporada (momentum)."""
+    empty = {"avg": None, "hits": 0, "ab": 0, "n_games": 0, "games": []}
+    try:
+        data = get_json(f"/people/{player_id}/stats",
+                         {"stats": "gameLog", "group": "hitting", "season": season})
+    except requests.HTTPError:
+        return empty
+    stats = data.get("stats", [])
+    if not stats or not stats[0].get("splits"):
+        return empty
+    splits = sorted(stats[0]["splits"], key=lambda s: s["date"])[-n:]
+    total_ab = total_hits = 0
+    games = []
+    for s in splits:
+        st = s["stat"]
+        ab = int(st.get("atBats", 0) or 0)
+        hits = int(st.get("hits", 0) or 0)
+        total_ab += ab
+        total_hits += hits
+        games.append({"date": s["date"], "ab": ab, "hits": hits})
+    avg = (total_hits / total_ab) if total_ab else None
+    return {"avg": avg, "hits": total_hits, "ab": total_ab, "n_games": len(splits), "games": games}
+
+
+def lineup_batter_detail(players, season, opposing_pitcher_hand):
+    """Para cada bateador del lineup ya CONFIRMADO: AVG/OPS contra la mano
+    del abridor rival de hoy, y como viene en sus ultimos 5 juegos.
+    Regresa un dict {player_id: {...}} para cruzarlo despues con el AVG de
+    temporada que ya trae lineup_batting_avg (evita pedirlo dos veces).
+    Solo se debe llamar cuando el lineup esta confirmado - antes de eso no
+    hay 9 titulares reales que analizar, solo se estaria adivinando."""
+    detail = {}
+    for p in players:
+        player_id = p["id"]
+        vs_hand = get_player_vs_hand_split(player_id, season, opposing_pitcher_hand)
+        last5 = get_player_last_n_games(player_id, season, n=5)
+        detail[player_id] = {
+            "vs_hand_avg": vs_hand["avg"] if vs_hand else None,
+            "vs_hand_ops": vs_hand["ops"] if vs_hand else None,
+            "last5_avg": last5["avg"], "last5_hits": last5["hits"], "last5_ab": last5["ab"],
+        }
+    return detail
 
 
 def get_days_rest(pitcher_id, season, game_date):

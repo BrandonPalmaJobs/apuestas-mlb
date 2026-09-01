@@ -16,8 +16,11 @@ Que hace, en orden:
   3. Enriquece esos datos con el clima REAL de cada juego (ml_data.py
      --enrich-weather) - es un paso aparte porque usa un endpoint distinto
      de MLB (feed/live), ~5 min mas.
-  4. Reentrena los 3 modelos (ml_train.py) y guarda el resultado en
-     training_history.csv para poder ver la tendencia entre corridas.
+  4. Reentrena los 3 modelos por pitcher (ml_train.py) y guarda el
+     resultado en training_history.csv.
+  5. Reentrena los modelos de picks conjuntos (ml_train_matchup.py:
+     favorito y total de carreras 1-3/1-5 entradas, total 1er inning) y
+     guarda el resultado en training_history_matchup.csv.
 
 Uso recomendado: correr esto una vez por semana (o cuando quieras "refrescar"
 el modelo con los juegos mas recientes). No hace falta correrlo mas seguido
@@ -52,18 +55,21 @@ def main():
     args = parser.parse_args()
 
     if not args.skip_evaluate:
-        run(["ml_track.py", "--evaluate"], "PASO 1/3: Evaluando predicciones pasadas vs. resultado real")
+        run(["ml_track.py", "--evaluate"], "PASO 1/5: Evaluando predicciones pasadas vs. resultado real")
 
     if not args.skip_collect:
         run(["ml_data.py", "--season", str(args.season), "--out", "training_data.csv"],
-            "PASO 2/4: Recolectando dataset historico actualizado (puede tardar 20-45 min)")
+            "PASO 2/5: Recolectando dataset historico actualizado (puede tardar 20-45 min)")
         run(["ml_data.py", "--enrich-weather", "training_data.csv", "--out", "training_data.csv"],
-            "PASO 3/4: Enriqueciendo con clima real de cada juego (~5 min)")
+            "PASO 3/5: Enriqueciendo con clima real de cada juego (~5 min)")
     else:
-        print("\nPASO 2-3/4: omitidos (--skip-collect)")
+        print("\nPASO 2-3/5: omitidos (--skip-collect)")
 
     run(["ml_train.py", "--data", "training_data.csv"],
-        "PASO 4/4: Reentrenando los 3 modelos")
+        "PASO 4/5: Reentrenando los 3 modelos por pitcher")
+
+    run(["ml_train_matchup.py", "--data", "training_data.csv"],
+        "PASO 5/5: Reentrenando los picks conjuntos (favorito y total 1-3/1-5, total 1er inning)")
 
     print("\n" + "=" * 72)
     print("Listo. Revisa training_history.csv para ver como va cambiando el "

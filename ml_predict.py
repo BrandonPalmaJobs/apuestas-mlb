@@ -149,6 +149,20 @@ def predict_with_bundle(bundle, features):
     return model.predict(X)[0]
 
 
+def predict_matchup(features_home, features_away, bundle):
+    """Sirve cualquiera de los 5 modelos conjuntos entrenados por
+    ml_train_matchup.py (favorito y total de carreras 1-3/1-5, total 1er
+    inning): arma la fila home_pitcher_*/away_pitcher_* a partir de los
+    dicts de features que compute_current_features ya calcula por
+    separado para cada pitcher, y regresa la probabilidad de la clase
+    positiva (home favorito / total sobre la linea, segun el bundle)."""
+    row = {}
+    row.update({f"home_pitcher_{k}": v for k, v in features_home.items()})
+    row.update({f"away_pitcher_{k}": v for k, v in features_away.items()})
+    X = pd.DataFrame([row])[bundle["features"]]
+    return bundle["model"].predict_proba(X)[0, 1]
+
+
 def main():
     parser = argparse.ArgumentParser(description="Predice con ML: 0 carreras 1er inning y carreras esperadas 1-3")
     parser.add_argument("equipo_a")

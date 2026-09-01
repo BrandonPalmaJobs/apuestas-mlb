@@ -485,6 +485,7 @@ def _build_pitcher_row(pitcher_id, pitcher_name, team_id, season, s, prior, avg_
         "own_bullpen_ip_3d": own_bullpen["bullpen_ip"],
         "h2h_avg_runs_1to3": h2h["avg_runs"], "h2h_n_games": h2h["n_games"],
         "label_scoreless_1st": int(label_runs == 0),
+        "label_runs_1st": label_runs,
         "label_runs_1to3": label_runs_1to3,
         "label_runs_1to5": label_runs_1to5,
     }
