@@ -379,4 +379,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-01,822687,2026-09-01,Atlanta Braves,700363,AJ Smith-Shawver,0,0.5357989091144729,Regresion logistica,1.0,2.7015863389299977,Regresion lineal,1.3333333333333333,3.995212787762708,Gradient Boosting,3.0,,,,False
 2026-09-01,822687,2026-09-01,Washington Nationals,663623,Jake Irvin,1,0.6627743377754084,Regresion logistica,0.8,2.300123548359416,Regresion lineal,1.7,3.353866685343694,Gradient Boosting,3.3,,,,False
 2026-09-01,825038,2026-09-01,Philadelphia Phillies,666200,Jesús Luzardo,0,0.7564891312433281,Regresion logistica,0.9,1.726715460484946,Regresion lineal,0.3,2.9792316252598456,Gradient Boosting,1.0,,,,False
-2026-09-01,825038,2026-09-01,Arizona Diamondbacks,593958,Eduardo Rodriguez,1,0.7440030735481364,Regresion logistica,0.7,1.3918326840481572,Regresion lineal,1.6,2.2089861347191038,Gradient Boosting,2.0,,,,False
+2026-09-01,825038,2026-09-01,Arizona Diamondbacks,593958,Eduardo Rodriguez,1,0.7440030735481364,Regresion logistica,0.7,1.3918326840481572,Regresion lineal,1.6,2.208986134719104,Gradient Boosting,2.0,,,,False
+2026-09-01,823984,2026-09-01,New York Yankees,543037,Gerrit Cole,0,0.7208070240753357,Regresion logistica,0.9,1.259911729680958,Regresion lineal,0.3,2.460838274574176,Gradient Boosting,1.1,,,,False
+2026-09-01,823984,2026-09-01,Los Angeles Angels,680570,Grayson Rodriguez,1,0.731217374271399,Regresion logistica,0.5,1.2130705977460128,Regresion lineal,2.6,2.3954090858210377,Gradient Boosting,3.8,,,,False
