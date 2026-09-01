@@ -523,6 +523,17 @@ def collect_league_dataset(season, team_names=None, verbose=True, max_workers=8)
         if verbose:
             print(f"[{ti+1}/{len(teams)}] {team['name']}: {len(pitchers)} pitchers revisados, "
                   f"{len(all_rows)} filas acumuladas ({time.time()-t0:.0f}s)", file=sys.stderr)
+        # _PBP_CACHE y _BOXSCORE_CACHE guardan el JSON completo (jugada por
+        # jugada / boxscore) de cada juego que se toca - para UN equipo esto
+        # es manejable, pero acumulado sin limpiar para las 30 franquicias
+        # de la temporada completa puede llegar a varios cientos de MB, mas
+        # de lo que da el contenedor gratuito de Streamlit Cloud (se vio
+        # tronar la app entera, sin traceback, a media recoleccion). El
+        # costo es volver a pedir el juego si otro equipo lo comparte mas
+        # adelante (partido entre dos equipos ya procesados) - mas lento,
+        # pero no se queda sin memoria.
+        _PBP_CACHE.clear()
+        _BOXSCORE_CACHE.clear()
     return pd.DataFrame(all_rows)
 
 
