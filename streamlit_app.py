@@ -36,11 +36,11 @@ from ml_data import live_weather_features
 from ml_predict import compute_current_features, predict_matchup, predict_with_bundle
 
 MATCHUP_MODELS = [
-    ("model_1st_total.joblib", "1er inning - total de carreras", "over"),
-    ("model_1to3_favorite.joblib", "1-3 entradas - quien anota mas", "favorite"),
-    ("model_1to3_total.joblib", "1-3 entradas - total de carreras", "over"),
-    ("model_1to5_favorite.joblib", "1-5 entradas - quien anota mas", "favorite"),
-    ("model_1to5_total.joblib", "1-5 entradas - total de carreras", "over"),
+    ("model_1st_total.joblib", "Primer inning - Total", "over"),
+    ("model_1to3_favorite.joblib", "Innings 1 a 3 - Hándicap", "favorite"),
+    ("model_1to3_total.joblib", "Innings 1 a 3 - Total", "over"),
+    ("model_1to5_favorite.joblib", "Innings 1 a 5 - Hándicap", "favorite"),
+    ("model_1to5_total.joblib", "Innings 1 a 5 - Total", "over"),
 ]
 
 st.set_page_config(page_title="MLB Apuestas", page_icon="⚾", layout="wide")
