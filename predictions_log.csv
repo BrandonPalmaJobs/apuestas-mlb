@@ -384,3 +384,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-01,823984,2026-09-01,Los Angeles Angels,680570,Grayson Rodriguez,1,0.731217374271399,Regresion logistica,0.5,1.2130705977460128,Regresion lineal,2.6,2.3954090858210377,Gradient Boosting,3.8,,,,False
 2026-09-01,822854,2026-09-01,Texas Rangers,669022,MacKenzie Gore,1,0.7617973271545371,Regresion logistica,0.7,1.5835622610987976,Regresion lineal,1.6,2.184613220781219,Gradient Boosting,2.9,,,,False
 2026-09-01,822854,2026-09-01,Athletics,669620,Brady Basso,0,0.7441719383647665,Regresion logistica,0.6666666666666666,2.1727317377174704,Regresion lineal,1.3333333333333333,3.2209847040744624,Gradient Boosting,2.0,,,,False
+2026-09-01,823908,2026-09-01,St. Louis Cardinals,700241,Michael McGreevy,0,0.6381729071299275,Regresion logistica,0.6,1.7111456398707108,Regresion lineal,2.2,2.7211286301284154,Gradient Boosting,3.0,,,,False
+2026-09-01,823908,2026-09-01,Los Angeles Dodgers,641778,Eric Lauer,1,0.7708352023471917,Regresion logistica,0.5,0.9968044518253083,Regresion lineal,2.0,1.6587690193394906,Gradient Boosting,2.7,,,,False
