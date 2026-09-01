@@ -821,8 +821,9 @@ def render_evaluar():
 # Reentrenar modelos (reemplaza reentrenar_modelos.bat)
 # ---------------------------------------------------------------------------
 
-def _run_retrain(skip_collect):
+def _run_retrain(skip_collect, skip_enrich):
     season = date.today().year
+    data_changed = False
 
     with st.status("Paso 1/5 · Evaluando predicciones pasadas...", expanded=True) as status:
         log = st.empty()
@@ -841,7 +842,11 @@ def _run_retrain(skip_collect):
                 st.error("La recoleccion de datos fallo (revisa el log de arriba). Se detiene el reentrenamiento.")
                 return
             status.update(label="Paso 2/5 listo", state="complete")
+            data_changed = True
+    else:
+        st.info("Paso 2/5 omitido (se usa el training_data.csv que ya existe).")
 
+    if not skip_enrich:
         with st.status("Paso 3/5 · Agregando clima real de cada juego...", expanded=True) as status:
             log = st.empty()
             rc = _stream_subprocess(
@@ -849,10 +854,9 @@ def _run_retrain(skip_collect):
                  "--out", "training_data.csv"], log)
             status.update(label="Paso 3/5 listo" if rc == 0 else "Paso 3/5 con advertencias",
                            state="complete" if rc == 0 else "error")
+            data_changed = True
     else:
-        st.info("Pasos 2-3/5 omitidos (se usa el training_data.csv que ya existe). Si nunca has recolectado "
-                 "desde que se agregaron los picks conjuntos, hazlo sin omitir - a los datos viejos les "
-                 "falta una columna que esos modelos necesitan.")
+        st.info("Paso 3/5 omitido (se usa el clima que ya tiene training_data.csv).")
 
     with st.status("Paso 4/5 · Reentrenando los 3 modelos por pitcher...", expanded=True) as status:
         log = st.empty()
@@ -884,7 +888,7 @@ def _run_retrain(skip_collect):
         "model_1to5_total.joblib", "model_1to5_total.joblib.metrics.json",
         "training_history_matchup.csv",
     ]
-    if not skip_collect:
+    if data_changed:
         files_to_save.append("training_data.csv")
     ok, msg = git_sync.commit_and_push(
         files_to_save, f"Reentrenamiento automatico {date.today().isoformat()}", st.secrets, APP_DIR,
@@ -909,13 +913,18 @@ def render_reentrenar():
         )
 
     skip_collect = st.checkbox(
-        "Omitir recoleccion de datos (usar el training_data.csv que ya existe, solo reentrena "
-        "mas rapido con lo que ya hay)", value=False,
+        "Omitir recoleccion de datos (usar el training_data.csv que ya existe - marca esto si la "
+        "recoleccion ya termino bien la ultima vez y solo fallo un paso de despues)", value=False,
     )
-    confirmado = st.checkbox("Entiendo que esto puede tardar 20-45 minutos y no voy a cerrar la app mientras corre.")
+    skip_enrich = st.checkbox(
+        "Omitir tambien el clima real (usar training_data.csv tal cual, sin volver a agregar clima) - "
+        "normalmente déjalo SIN marcar", value=False,
+    )
+    tiempo_msg = "unos minutos" if skip_collect else "20-45 minutos"
+    confirmado = st.checkbox(f"Entiendo que esto puede tardar {tiempo_msg} y no voy a cerrar la app mientras corre.")
 
     if st.button("Iniciar reentrenamiento", type="primary", disabled=not confirmado):
-        _run_retrain(skip_collect)
+        _run_retrain(skip_collect, skip_enrich)
 
     hist_path = os.path.join(APP_DIR, "training_history.csv")
     if os.path.exists(hist_path):
