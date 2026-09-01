@@ -382,3 +382,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-01,825038,2026-09-01,Arizona Diamondbacks,593958,Eduardo Rodriguez,1,0.7440030735481364,Regresion logistica,0.7,1.3918326840481572,Regresion lineal,1.6,2.208986134719104,Gradient Boosting,2.0,,,,False
 2026-09-01,823984,2026-09-01,New York Yankees,543037,Gerrit Cole,0,0.7208070240753357,Regresion logistica,0.9,1.259911729680958,Regresion lineal,0.3,2.460838274574176,Gradient Boosting,1.1,,,,False
 2026-09-01,823984,2026-09-01,Los Angeles Angels,680570,Grayson Rodriguez,1,0.731217374271399,Regresion logistica,0.5,1.2130705977460128,Regresion lineal,2.6,2.3954090858210377,Gradient Boosting,3.8,,,,False
+2026-09-01,822854,2026-09-01,Texas Rangers,669022,MacKenzie Gore,1,0.7617973271545371,Regresion logistica,0.7,1.5835622610987976,Regresion lineal,1.6,2.184613220781219,Gradient Boosting,2.9,,,,False
+2026-09-01,822854,2026-09-01,Athletics,669620,Brady Basso,0,0.7441719383647665,Regresion logistica,0.6666666666666666,2.1727317377174704,Regresion lineal,1.3333333333333333,3.2209847040744624,Gradient Boosting,2.0,,,,False
