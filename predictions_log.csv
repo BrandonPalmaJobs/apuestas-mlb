@@ -375,4 +375,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-01,824391,2026-09-01,Toronto Blue Jays,681293,Spencer Arrighetti,0,0.6190500641739763,Regresion logistica,0.6,2.0842472947004254,Regresion lineal,2.2,1.9114391097531416,Gradient Boosting,4.3,,,,False
 2026-09-01,824391,2026-09-01,Cleveland Guardians,668909,Gavin Williams,1,0.7821109313115812,Regresion logistica,0.8,1.330137911199096,Regresion lineal,0.8,1.7435302656195963,Gradient Boosting,2.1,,,,False
 2026-09-01,823340,2026-09-01,San Francisco Giants,657277,Logan Webb,0,0.5973862492657195,Regresion logistica,0.7,2.1597530964890024,Regresion lineal,2.2,2.7524811886578133,Gradient Boosting,3.3,,,,False
-2026-09-01,823340,2026-09-01,Pittsburgh Pirates,694973,Paul Skenes,1,0.663527831017808,Regresion logistica,0.8,1.8181056157922795,Regresion lineal,1.4,2.839360789442022,Gradient Boosting,2.9,,,,False
+2026-09-01,823340,2026-09-01,Pittsburgh Pirates,694973,Paul Skenes,1,0.663527831017808,Regresion logistica,0.8,1.81810561579228,Regresion lineal,1.4,2.839360789442022,Gradient Boosting,2.9,,,,False
+2026-09-01,822687,2026-09-01,Atlanta Braves,700363,AJ Smith-Shawver,0,0.5357989091144729,Regresion logistica,1.0,2.7015863389299977,Regresion lineal,1.3333333333333333,3.995212787762708,Gradient Boosting,3.0,,,,False
+2026-09-01,822687,2026-09-01,Washington Nationals,663623,Jake Irvin,1,0.6627743377754084,Regresion logistica,0.8,2.300123548359416,Regresion lineal,1.7,3.353866685343694,Gradient Boosting,3.3,,,,False
