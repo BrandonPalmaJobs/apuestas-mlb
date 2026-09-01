@@ -40,12 +40,20 @@ jobs:
         run: |
           git config user.name "MLB Apuestas Bot"
           git config user.email "mlb-apuestas-bot@users.noreply.github.com"
+          # predictions_log.csv NO se sube desde aqui: la app en Streamlit
+          # Cloud tambien lo modifica (cada reporte que alguien genera) y
+          # puede pasar al mismo tiempo que este workflow corre - dos
+          # escrituras reales al mismo archivo causan un conflicto de
+          # contenido que un rebase no puede resolver solo (ya paso). El
+          # paso de evaluar predicciones (arriba) sigue corriendo para ver
+          # las metricas en este log, solo no se persiste su copia local.
+          git checkout -- predictions_log.csv 2>/dev/null || true
           git add model*.joblib* training_data.csv training_history.csv \
-                  training_history_matchup.csv predictions_log.csv
+                  training_history_matchup.csv
           git diff --cached --quiet || git commit -m "Reentrenamiento automatico (GitHub Actions) $(date -u +%Y-%m-%d)"
           # Si alguien mas subio un commit mientras esto corria (20-45 min),
           # un push directo se rechaza (non-fast-forward). Rebase encima de
-          # lo mas reciente antes de subir - sin conflicto real posible aqui
-          # porque este job es el unico que toca estos archivos de datos.
+          # lo mas reciente antes de subir - ya no deberia haber conflicto
+          # de contenido real, los demas archivos solo los toca este job.
           git pull --rebase origin main
           git push
