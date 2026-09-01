@@ -30,37 +30,29 @@ y push de los modelos actualizados al repo automaticamente — para eso
 necesita un `GITHUB_TOKEN` (Paso 3 de abajo). Si no lo configuras, la app
 funciona igual, solo que el reentrenamiento no sobrevive un reinicio.
 
-## Paso 1 — Repo de GitHub
+## Paso 1 — Repo de GitHub ✅ (ya hecho)
 
-Crea un repositorio **vacio y privado** en GitHub (recomendado privado, ya
-que incluye tus modelos y tu historial de predicciones):
-
-1. Ve a https://github.com/new
-2. Nombre sugerido: `apuestas-mlb`
-3. Visibilidad: **Private**
-4. NO marques "Add a README" (el repo debe quedar completamente vacio)
-5. Create repository
-
-Cuando lo tengas, pásame la URL (algo como
-`https://github.com/TU_USUARIO/apuestas-mlb`) y subo el codigo de esta
-carpeta por ti.
+Ya cree y subi el codigo a un repositorio **privado**:
+https://github.com/BrandonPalmaJobs/apuestas-mlb
 
 ## Paso 2 — Token para que el reentrenamiento se guarde solo
 
 1. Ve a https://github.com/settings/tokens?type=beta (Fine-grained tokens)
 2. "Generate new token"
-3. Repository access: **Only select repositories** → elige el repo del
-   Paso 1
+3. Repository access: **Only select repositories** → `apuestas-mlb`
 4. Permissions → Repository permissions → **Contents: Read and write**
 5. Generate token, copia el valor (empieza con `github_pat_...`) —
    solo se muestra una vez
+
+(Este paso lo tienes que hacer tu desde el navegador — es una credencial
+personal, no algo que yo deba generar o ver por ti.)
 
 ## Paso 3 — Desplegar en Streamlit Community Cloud
 
 1. Ve a https://share.streamlit.io e inicia sesion con tu cuenta de GitHub
 2. "Create app" → "Deploy a public app from a repo" (el repo privado se ve
    igual una vez autorizado el acceso de Streamlit a GitHub)
-3. Repository: el repo del Paso 1
+3. Repository: `BrandonPalmaJobs/apuestas-mlb`
 4. Branch: `main`
 5. Main file path: `streamlit_app.py`
 6. Antes de darle "Deploy", abre "Advanced settings" y pega esto en el
@@ -68,7 +60,7 @@ carpeta por ti.
 
    ```toml
    GITHUB_TOKEN = "github_pat_xxxxxxxxxxxx"
-   GITHUB_REPO = "TU_USUARIO/apuestas-mlb"
+   GITHUB_REPO = "BrandonPalmaJobs/apuestas-mlb"
 
    # Opcional: pide un PIN antes de dejar entrar a la app
    APP_PASSWORD = "elige-un-pin"
