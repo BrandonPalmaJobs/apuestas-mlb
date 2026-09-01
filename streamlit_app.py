@@ -898,33 +898,41 @@ def _run_retrain(skip_collect, skip_enrich):
 
 def render_reentrenar():
     st.header("🔁 Reentrenar modelos")
-    st.write(
-        "Vuelve a entrenar los 3 modelos (0 carreras 1er inning, carreras 1-3, carreras 1-5) con "
-        "**todos** los juegos jugados hasta hoy. Tarda entre **20 y 45 minutos** porque recolecta "
-        "el historial completo de la temporada desde la API de MLB. Mantén esta pestaña abierta y "
-        "la pantalla del celular encendida mientras corre."
+    st.success(
+        "El reentrenamiento ya corre solo cada 3 dias en GitHub Actions (servidor de GitHub, no "
+        "depende de esta pestana ni de tu conexion) - no hace falta que uses el boton de abajo a "
+        "menos que quieras forzar un reentrenamiento ahora mismo. Revisa el progreso o dispáralo a "
+        "mano en github.com/BrandonPalmaJobs/apuestas-mlb → pestaña **Actions**."
     )
-
-    if not git_sync.is_configured(st.secrets):
-        st.warning(
-            "GITHUB_TOKEN / GITHUB_REPO no configurados en Secrets: los modelos reentrenados solo "
-            "van a durar hasta que la app se reinicie o se duerma por inactividad. Revisa el README "
-            "para configurarlo y que el reentrenamiento sea permanente."
+    with st.expander("Reentrenar manualmente desde aqui (no recomendado - ver de arriba)"):
+        st.write(
+            "Vuelve a entrenar los modelos con **todos** los juegos jugados hasta hoy. Tarda entre "
+            "**20 y 45 minutos** porque recolecta el historial completo de la temporada desde la API "
+            "de MLB, y necesita que esta pestaña se quede conectada TODO ese tiempo sin cortes - "
+            "cualquier corte de red pierde el progreso. Por eso el reentrenamiento automatico de "
+            "GitHub Actions (arriba) es la forma recomendada."
         )
 
-    skip_collect = st.checkbox(
-        "Omitir recoleccion de datos (usar el training_data.csv que ya existe - marca esto si la "
-        "recoleccion ya termino bien la ultima vez y solo fallo un paso de despues)", value=False,
-    )
-    skip_enrich = st.checkbox(
-        "Omitir tambien el clima real (usar training_data.csv tal cual, sin volver a agregar clima) - "
-        "normalmente déjalo SIN marcar", value=False,
-    )
-    tiempo_msg = "unos minutos" if skip_collect else "20-45 minutos"
-    confirmado = st.checkbox(f"Entiendo que esto puede tardar {tiempo_msg} y no voy a cerrar la app mientras corre.")
+        if not git_sync.is_configured(st.secrets):
+            st.warning(
+                "GITHUB_TOKEN / GITHUB_REPO no configurados en Secrets: los modelos reentrenados solo "
+                "van a durar hasta que la app se reinicie o se duerma por inactividad."
+            )
 
-    if st.button("Iniciar reentrenamiento", type="primary", disabled=not confirmado):
-        _run_retrain(skip_collect, skip_enrich)
+        skip_collect = st.checkbox(
+            "Omitir recoleccion de datos (usar el training_data.csv que ya existe - marca esto si la "
+            "recoleccion ya termino bien la ultima vez y solo fallo un paso de despues)", value=False,
+        )
+        skip_enrich = st.checkbox(
+            "Omitir tambien el clima real (usar training_data.csv tal cual, sin volver a agregar "
+            "clima) - normalmente déjalo SIN marcar", value=False,
+        )
+        tiempo_msg = "unos minutos" if skip_collect else "20-45 minutos"
+        confirmado = st.checkbox(
+            f"Entiendo que esto puede tardar {tiempo_msg} y no voy a cerrar la app mientras corre.")
+
+        if st.button("Iniciar reentrenamiento", type="primary", disabled=not confirmado):
+            _run_retrain(skip_collect, skip_enrich)
 
     hist_path = os.path.join(APP_DIR, "training_history.csv")
     if os.path.exists(hist_path):

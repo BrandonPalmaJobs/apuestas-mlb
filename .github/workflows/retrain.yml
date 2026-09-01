@@ -1,0 +1,46 @@
+name: Reentrenar modelos MLB
+
+# Corre el reentrenamiento completo (retrain_pipeline.py) en un servidor de
+# GitHub en vez de en el navegador/Streamlit Cloud - no depende de que una
+# pestana se quede conectada 20-45 minutos, y tiene mucha mas RAM disponible
+# (elimina el riesgo de quedarse sin memoria que tenia en Streamlit Cloud).
+#
+# Se puede disparar de 3 formas:
+#   1. Solo, cada 3 dias (cron de abajo).
+#   2. A mano desde GitHub: pestana "Actions" -> "Reentrenar modelos MLB" ->
+#      "Run workflow".
+#   3. A mano desde la terminal: gh workflow run retrain.yml
+
+on:
+  schedule:
+    - cron: "0 9 */3 * *"  # 09:00 UTC (~03:00 hora de Mexico) cada 3er dia del mes
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  reentrenar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Reentrenar (evalua + recolecta + clima + entrena los 8 modelos)
+        run: python retrain_pipeline.py
+
+      - name: Guardar modelos y datos actualizados en el repo
+        run: |
+          git config user.name "MLB Apuestas Bot"
+          git config user.email "mlb-apuestas-bot@users.noreply.github.com"
+          git add model*.joblib* training_data.csv training_history.csv \
+                  training_history_matchup.csv predictions_log.csv
+          git diff --cached --quiet || git commit -m "Reentrenamiento automatico (GitHub Actions) $(date -u +%Y-%m-%d)"
+          git push
