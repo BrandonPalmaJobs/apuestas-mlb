@@ -49,6 +49,7 @@ import argparse
 import csv
 import os
 import sys
+import time
 from datetime import date, datetime, timedelta
 
 import requests
@@ -130,10 +131,21 @@ def confidence_label(n, low=CONFIDENCE_LOW, high=CONFIDENCE_HIGH):
     return f"confianza ALTA, n={n}"
 
 
-def get_json(path, params=None):
-    r = requests.get(f"{BASE}{path}", params=params, timeout=15)
-    r.raise_for_status()
-    return r.json()
+def get_json(path, params=None, retries=3):
+    """Un reporte hace docenas de llamadas seguidas a la API de MLB - sin
+    reintentos, un solo timeout momentaneo (comun al correr desde un
+    servidor compartido como Streamlit Cloud) tumba todo el reporte."""
+    last_err = None
+    for attempt in range(retries):
+        try:
+            r = requests.get(f"{BASE}{path}", params=params, timeout=15)
+            r.raise_for_status()
+            return r.json()
+        except (requests.exceptions.ConnectionError, requests.exceptions.Timeout) as e:
+            last_err = e
+            if attempt < retries - 1:
+                time.sleep(1.5 * (attempt + 1))
+    raise last_err
 
 
 def get_teams():
