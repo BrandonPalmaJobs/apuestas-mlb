@@ -1,0 +1,8 @@
+timestamp,n_rows,modelo_1er_inning,brier_1er_inning,brier_1er_inning_baseline,modelo_1to3,mae_1to3,mae_1to3_baseline,modelo_1to5,mae_1to5,mae_1to5_baseline
+2026-07-03T11:50:24,1861,Regresion logistica,0.2099,0.2218,Regresion lineal,1.3964,1.4018,Regresion lineal,1.8872,1.9203
+2026-07-10T14:37:38,2032,Regresion logistica,0.2129,0.2397,Baseline ingenuo (promedio trailing),1.4422,1.4422,Regresion lineal,1.9049,1.9548
+2026-07-31T14:52:26,2490,Regresion logistica,0.1845,0.2056,Regresion lineal,1.3708,1.3875,Regresion lineal,1.8085,1.8288
+2026-08-04T16:58:20,2587,Regresion logistica,0.1888,0.2074,Regresion lineal,1.4038,1.4551,Regresion lineal,1.7933,1.8446
+2026-08-04T17:39:18,2598,Regresion logistica,0.1878,0.2075,Regresion lineal,1.4052,1.4585,Regresion lineal,1.8064,1.8599
+2026-08-16T10:33:26,3110,Regresion logistica,0.1921,0.212,Regresion lineal,1.3479,1.4025,Regresion lineal,1.8015,1.8677
+2026-08-31T16:11:55,3575,Regresion logistica,0.2014,0.2156,Regresion lineal,1.3048,1.3757,Gradient Boosting,1.772,1.8379
