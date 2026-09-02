@@ -391,3 +391,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-01,824391,2026-09-01,Toronto Blue Jays,693686,Spencer Miles,0,0.709831314762541,Regresion logistica,1.0,1.915092172443608,Regresion lineal,2.6,1.8692655193126209,Gradient Boosting,4.2,,,,False
 2026-09-01,824716,2026-09-01,Seattle Mariners,693433,Bryan Woo,0,0.6890055156277847,Regresion logistica,0.7,1.4521088387442154,Regresion lineal,1.7,2.467546805339253,Gradient Boosting,2.7,,,,False
 2026-09-01,824716,2026-09-01,Boston Red Sox,699151,Jedixson Paez,1,,,,,,,,,,,,,False
+2026-09-02,824390,2026-09-02,Toronto Blue Jays,656302,Dylan Cease,0,0.7527324559595994,Regresion logistica,0.9,1.2370551880643657,Regresion lineal,0.5,2.042806731061213,Gradient Boosting,1.0,,,,False
+2026-09-02,824390,2026-09-02,Cleveland Guardians,676282,Joey Cantillo,1,0.8168841771185101,Regresion logistica,0.6,1.0118115441243893,Regresion lineal,2.0,2.589485124751085,Gradient Boosting,2.5,,,,False
