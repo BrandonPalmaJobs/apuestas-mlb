@@ -395,3 +395,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-02,824390,2026-09-02,Cleveland Guardians,676282,Joey Cantillo,1,0.8168841771185101,Regresion logistica,0.6,1.0118115441243891,Regresion lineal,2.0,2.589485124751085,Gradient Boosting,2.5,,,,False
 2026-09-02,822931,2026-09-02,New York Mets,663795,Justin Hagenman,0,,,,,,,,,,,,,False
 2026-09-02,822931,2026-09-02,Tampa Bay Rays,643377,Griffin Jax,1,0.7937772405608476,Regresion logistica,0.7,0.7331400257819177,Regresion lineal,1.3,1.3656794292430914,Gradient Boosting,2.1,,,,False
+2026-09-02,824634,2026-09-02,Milwaukee Brewers,694819,Jacob Misiorowski,0,0.71597068107459,Regresion logistica,0.8,1.7324762719525455,Regresion lineal,0.8,2.6669676805484746,Gradient Boosting,1.7,,,,False
+2026-09-02,824634,2026-09-02,Chicago Cubs,656849,David Peterson,1,0.6936323713655949,Regresion logistica,0.7,1.5183123139488504,Regresion lineal,1.2,2.6804596437217154,Gradient Boosting,2.8,,,,False
