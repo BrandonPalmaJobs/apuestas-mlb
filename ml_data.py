@@ -167,6 +167,17 @@ def runs_allowed_1to5_cached(gamePk, is_home):
     return runs_allowed_innings_cached(gamePk, is_home, 5)
 
 
+def runs_allowed_full_cached(gamePk, is_home):
+    """Carreras del juego COMPLETO (todas las entradas, incluye extras)
+    que permitio el lado 'is_home' - viene del resumen de linescore
+    (ls['teams']), mas confiable que sumar entradas a mano porque ya
+    maneja juegos a extra-innings sin logica aparte."""
+    ls = get_linescore_cached(gamePk)
+    teams = ls.get("teams", {})
+    side = "away" if is_home else "home"
+    return teams.get(side, {}).get("runs")
+
+
 _TTO1_CACHE = {}
 
 
@@ -473,7 +484,8 @@ def _build_pitcher_row(pitcher_id, pitcher_name, team_id, season, s, prior, avg_
     label_runs = runs_allowed_first_cached(cur["game"]["gamePk"], is_home_cur)
     label_runs_1to3 = runs_allowed_1to3_cached(cur["game"]["gamePk"], is_home_cur)
     label_runs_1to5 = runs_allowed_1to5_cached(cur["game"]["gamePk"], is_home_cur)
-    if label_runs is None or label_runs_1to3 is None or label_runs_1to5 is None:
+    label_runs_full = runs_allowed_full_cached(cur["game"]["gamePk"], is_home_cur)
+    if label_runs is None or label_runs_1to3 is None or label_runs_1to5 is None or label_runs_full is None:
         return None
 
     return {
@@ -500,6 +512,7 @@ def _build_pitcher_row(pitcher_id, pitcher_name, team_id, season, s, prior, avg_
         "label_runs_1st": label_runs,
         "label_runs_1to3": label_runs_1to3,
         "label_runs_1to5": label_runs_1to5,
+        "label_runs_full": label_runs_full,
     }
 
 

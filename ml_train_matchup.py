@@ -62,8 +62,10 @@ def build_matchup_dataset(df):
     una sola fila por juego, con las features de ambos pitchers prefijadas
     (home_pitcher_*/away_pitcher_*) y las carreras reales de ambos equipos
     derivadas de los labels ya existentes."""
+    has_full = "label_runs_full" in df.columns
+
     rows = []
-    ties_1to3 = ties_1to5 = 0
+    ties_1to3 = ties_1to5 = ties_full = 0
     for gamePk, g in df.groupby("gamePk"):
         home = g[g["is_home"] == 1]
         away = g[g["is_home"] == 0]
@@ -99,11 +101,23 @@ def build_matchup_dataset(df):
         else:
             row["label_1to5_favorite"] = int(home_runs_1to5 > away_runs_1to5)
 
+        if has_full:
+            home_runs_full, away_runs_full = away["label_runs_full"], home["label_runs_full"]
+            if home_runs_full == away_runs_full:
+                # Un juego de MLB no puede terminar en empate (se juegan
+                # entradas extra hasta que alguien gane) - si esto pasa es
+                # un dato incompleto/juego suspendido, se descarta igual.
+                row["label_full_favorite"] = None
+                ties_full += 1
+            else:
+                row["label_full_favorite"] = int(home_runs_full > away_runs_full)
+
         rows.append(row)
 
     print(f"Juegos emparejados (ambos abridores presentes en el dataset): {len(rows)} "
           f"de {df['gamePk'].nunique()} gamePks originales")
-    print(f"Empates descartados - favorito 1-3: {ties_1to3} | favorito 1-5: {ties_1to5}")
+    print(f"Empates/incompletos descartados - favorito 1-3: {ties_1to3} | favorito 1-5: {ties_1to5}"
+          + (f" | ganador del juego: {ties_full}" if has_full else ""))
     return pd.DataFrame(rows)
 
 
@@ -237,6 +251,15 @@ def main():
                                   "label_1st_over", f"Total de carreras 1er inning (over {thresholds['label_1st_total']})",
                                   extra_bundle={"threshold": thresholds["label_1st_total"]}),
     ]
+
+    if "label_full_favorite" in matchup_df.columns:
+        results.append(train_matchup_classifier(
+            matchup_df, args.test_frac, "model_full_favorite.joblib", feats_1to5,
+            "label_full_favorite", "Money line (equipo local gana el juego completo)"))
+    else:
+        print("\nADVERTENCIA: el dataset no tiene 'label_runs_full' (se agrego recientemente a ml_data.py) - "
+              "hace falta recolectar de nuevo (sin --skip-collect) para poder entrenar el money line. "
+              "Se omite ese modelo esta vez, los demas se entrenan igual.")
 
     log_matchup_history(len(matchup_df), results, thresholds, args.history_path)
     print(f"\nGuardado en {args.history_path} para ver la tendencia entre reentrenamientos.")

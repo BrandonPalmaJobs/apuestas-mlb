@@ -41,6 +41,7 @@ MATCHUP_MODELS = [
     ("model_1to3_total.joblib", "Innings 1 a 3 - Total", "over"),
     ("model_1to5_favorite.joblib", "Innings 1 a 5 - Hándicap", "favorite"),
     ("model_1to5_total.joblib", "Innings 1 a 5 - Total", "over"),
+    ("model_full_favorite.joblib", "Money line (ganador del juego)", "favorite"),
 ]
 
 st.set_page_config(page_title="MLB Apuestas", page_icon="⚾", layout="wide")
@@ -158,12 +159,13 @@ def _merge_batter_detail(lineup_detail, players, season, opposing_pitcher_hand):
 
 def compute_picks(report_a, report_b, is_home_a):
     """Junta las predicciones YA calculadas de 0-carreras-1er-inning por
-    pitcher con las de los 5 modelos conjuntos (favorito y total de
-    carreras 1-3/1-5, total 1er inning), en una sola lista de picks
-    candidatos ordenada de mas a menos confianza. El money line (quien
-    gana el juego completo) se calcula aparte con la formula de ofensiva
-    proyectada - no es un modelo entrenado, por eso no se mezcla en el
-    mismo ranking de confianza calibrada."""
+    pitcher con las de los 6 modelos conjuntos (favorito y total de
+    carreras 1-3/1-5, total 1er inning, y money line - ganador del juego
+    completo), en una sola lista de picks candidatos ordenada de mas a
+    menos confianza. Todos son modelos entrenados con probabilidad
+    calibrada - ya no hay ningun pick estimado solo por formula sin
+    validar (el money line via formula de ofensiva proyectada se quito
+    por eso mismo)."""
     picks = []
 
     for rep in (report_a, report_b):
@@ -194,7 +196,9 @@ def compute_picks(report_a, report_b, is_home_a):
                 continue
             if kind == "favorite":
                 over = prob >= 0.5
-                pick_text = f"{team_home_name if over else team_away_name} anota mas"
+                team_pick = team_home_name if over else team_away_name
+                verbo = "gana el juego" if filename == "model_full_favorite.joblib" else "anota mas"
+                pick_text = f"{team_pick} {verbo}"
             else:
                 threshold = bundle.get("threshold")
                 over = prob >= 0.5
@@ -203,18 +207,7 @@ def compute_picks(report_a, report_b, is_home_a):
             picks.append({"label": label, "pick": pick_text, "confidence": prob if over else 1 - prob})
 
     picks.sort(key=lambda x: x["confidence"], reverse=True)
-
-    moneyline_lean = None
-    op_a, op_b = report_a.get("ofensiva_proyectada"), report_b.get("ofensiva_proyectada")
-    if op_a and op_b:
-        runs_a, runs_b = op_a["carreras_proyectadas"], op_b["carreras_proyectadas"]
-        moneyline_lean = {
-            "favorite": report_a["team_name"] if runs_a > runs_b else report_b["team_name"],
-            "team_a": report_a["team_name"], "runs_a": runs_a,
-            "team_b": report_b["team_name"], "runs_b": runs_b,
-        }
-
-    return picks, moneyline_lean
+    return picks
 
 
 def build_full_report(equipo_a, equipo_b, season, pitcher_a_override, pitcher_b_override,
@@ -343,14 +336,14 @@ def build_full_report(equipo_a, equipo_b, season, pitcher_a_override, pitcher_b_
             ["predictions_log.csv"], f"Log de predicciones {game_date}", st.secrets, APP_DIR,
         )
 
-    picks, moneyline_lean = compute_picks(report_a, report_b, is_home_a)
+    picks = compute_picks(report_a, report_b, is_home_a)
 
     return {
         "matchup": matchup, "report_a": report_a, "report_b": report_b, "weather": weather,
         "whip_threshold": whip_threshold, "injuries_info": injuries_info, "park_factor": park_factor,
         "lineup_info": lineup_info, "umpire_info": umpire_info,
         "pitcher_override_msgs": pitcher_override_msgs, "sheet_status": sheet_status, "log_status": log_status,
-        "picks": picks, "moneyline_lean": moneyline_lean,
+        "picks": picks,
     }
 
 
@@ -510,34 +503,27 @@ def render_offense_table(a, b):
     st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
 
 
-def render_picks_section(picks, moneyline_lean):
+def render_picks_section(picks):
     st.markdown("### 🏆 Picks recomendados")
     if not picks:
         st.caption("No hay picks disponibles todavia - hace falta un juego programado entre estos equipos "
                    "y los modelos conjuntos entrenados (pestana 'Reentrenar modelos').")
-    else:
-        rows = []
-        for p in picks[:5]:
-            badge = "🟢" if p["confidence"] >= 0.65 else "🟡" if p["confidence"] >= 0.55 else "🔴"
-            rows.append({"": badge, "Pick": p["label"], "Recomendacion": p["pick"],
-                         "Confianza": f"{p['confidence']*100:.1f}%"})
-        st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
-        st.caption("Ordenados de mas a menos confianza segun modelos entrenados con el historial de la "
-                   "temporada. No es garantia de nada - revisa el tamano de muestra de cada dato en las "
-                   "secciones de abajo antes de decidir.")
-
-    if moneyline_lean:
-        st.caption(
-            f"💰 Money line (estimado por formula de ofensiva proyectada, **no** es un modelo entrenado "
-            f"como los picks de arriba): favorito **{moneyline_lean['favorite']}** — "
-            f"{moneyline_lean['team_a']} {moneyline_lean['runs_a']:.2f} carreras proyectadas vs. "
-            f"{moneyline_lean['team_b']} {moneyline_lean['runs_b']:.2f}."
-        )
+        return
+    rows = []
+    for p in picks[:6]:
+        badge = "🟢" if p["confidence"] >= 0.65 else "🟡" if p["confidence"] >= 0.55 else "🔴"
+        rows.append({"": badge, "Pick": p["label"], "Recomendacion": p["pick"],
+                     "Confianza": f"{p['confidence']*100:.1f}%"})
+    st.dataframe(pd.DataFrame(rows), hide_index=True, use_container_width=True)
+    st.caption("Ordenados de mas a menos confianza segun modelos entrenados con el historial de la "
+               "temporada (incluye money line). No es garantia de nada - revisa el tamano de muestra "
+               "de cada dato en las secciones de abajo antes de decidir, y ten cuidado extra con "
+               "picks 🔴 (cerca de 50%, el modelo no encontro ventaja real todavia).")
 
 
 def render_report(matchup, report_a, report_b, weather, whip_threshold, injuries_info, park_factor,
                    lineup_info, umpire_info, pitcher_override_msgs=None, sheet_status=None, log_status=None,
-                   picks=None, moneyline_lean=None):
+                   picks=None):
     a, b = report_a, report_b
     st.subheader(f"{a['team_name']} @ {b['team_name']}" if matchup else f"{a['team_name']} vs {b['team_name']}")
 
@@ -552,7 +538,7 @@ def render_report(matchup, report_a, report_b, weather, whip_threshold, injuries
     render_top_info(matchup, weather, park_factor, umpire_info, b["team_name"])
 
     st.divider()
-    render_picks_section(picks, moneyline_lean)
+    render_picks_section(picks)
 
     if injuries_info:
         with st.expander("🩹 Lesionados en la ofensiva"):
@@ -886,6 +872,7 @@ def _run_retrain(skip_collect, skip_enrich):
         "model_1to3_total.joblib", "model_1to3_total.joblib.metrics.json",
         "model_1to5_favorite.joblib", "model_1to5_favorite.joblib.metrics.json",
         "model_1to5_total.joblib", "model_1to5_total.joblib.metrics.json",
+        "model_full_favorite.joblib", "model_full_favorite.joblib.metrics.json",
         "training_history_matchup.csv",
     ]
     if data_changed:
@@ -1004,7 +991,7 @@ def render_ajustes():
     st.caption("Archivos de datos/modelos actuales:")
     for fname in ["model.joblib", "model_1to3.joblib", "model_1to5.joblib",
                   "model_1st_total.joblib", "model_1to3_favorite.joblib", "model_1to3_total.joblib",
-                  "model_1to5_favorite.joblib", "model_1to5_total.joblib",
+                  "model_1to5_favorite.joblib", "model_1to5_total.joblib", "model_full_favorite.joblib",
                   "training_data.csv", "training_history.csv", "training_history_matchup.csv",
                   "predictions_log.csv", "umpire_tendency.csv"]:
         path = os.path.join(APP_DIR, fname)
