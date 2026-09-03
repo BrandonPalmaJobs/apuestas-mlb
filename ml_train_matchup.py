@@ -206,8 +206,19 @@ def log_matchup_history(n_games_total, results_list, thresholds, history_path="t
         row[f"n_{key}"] = r["n_games"]
     for col, threshold in thresholds.items():
         row[f"linea_{col}"] = threshold
-    file_exists = os.path.exists(history_path)
-    pd.DataFrame([row]).to_csv(history_path, mode="a", header=not file_exists, index=False)
+    # Append en modo texto (mode="a") asume que las columnas nunca cambian -
+    # en cuanto se agrega un modelo nuevo (como paso con el money line), las
+    # filas viejas y la nueva tienen distinto numero de columnas y el CSV
+    # queda desalineado sin ningun error visible. Releer + concatenar con
+    # pandas alinea por NOMBRE de columna (NaN donde falte), no por
+    # posicion - el archivo es chico (una fila cada pocos dias), reescribirlo
+    # completo cada vez no tiene costo real.
+    if os.path.exists(history_path):
+        existing = pd.read_csv(history_path)
+        combined = pd.concat([existing, pd.DataFrame([row])], ignore_index=True)
+    else:
+        combined = pd.DataFrame([row])
+    combined.to_csv(history_path, index=False)
     return row
 
 
