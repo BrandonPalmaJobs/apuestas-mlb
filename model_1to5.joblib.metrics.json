@@ -1,17 +1,17 @@
 [
   {
     "modelo": "Baseline ingenuo (promedio trailing)",
-    "mae": 1.8472,
-    "rmse": 2.3366
+    "mae": 1.8371,
+    "rmse": 2.3232
   },
   {
     "modelo": "Regresion lineal",
-    "mae": 1.8063,
-    "rmse": 2.2835
+    "mae": 1.7763,
+    "rmse": 2.2557
   },
   {
     "modelo": "Gradient Boosting",
-    "mae": 1.7947,
-    "rmse": 2.2679
+    "mae": 1.7687,
+    "rmse": 2.2528
   }
 ]
