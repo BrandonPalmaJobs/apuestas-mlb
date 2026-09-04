@@ -405,3 +405,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-04,824471,2026-09-04,Cincinnati Reds,695076,Rhett Lowder,1,0.6453159517841753,Regresion logistica,0.7,1.9497797824293013,Regresion lineal,1.7,2.935846168993289,Gradient Boosting,2.9,,,,False
 2026-09-04,823418,2026-09-04,Atlanta Braves,519242,Chris Sale,0,0.7814728877662585,Regresion logistica,0.9,1.2636206075246883,Regresion lineal,0.7,2.3565231776715008,Gradient Boosting,1.0,,,,False
 2026-09-04,823418,2026-09-04,Philadelphia Phillies,650911,Cristopher Sánchez,1,0.7845086769333707,Regresion logistica,0.8,1.290660456671131,Regresion lineal,1.0,2.077014221330711,Gradient Boosting,2.0,,,,False
+2026-09-04,823338,2026-09-04,Pittsburgh Pirates,683003,Jared Jones,1,0.7406588930856656,Regresion logistica,0.9,1.4896570116704737,Regresion lineal,1.1,2.4515420075557643,Gradient Boosting,2.6,,,,False
+2026-09-04,823338,2026-09-04,Los Angeles Angels,696270,Ryan Johnson,0,0.702144850833329,Regresion logistica,0.8,2.0928229940006045,Regresion lineal,1.8,3.988429928230292,Gradient Boosting,2.9,,,,False
