@@ -409,3 +409,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-04,823338,2026-09-04,Los Angeles Angels,696270,Ryan Johnson,0,0.702144850833329,Regresion logistica,0.8,2.0928229940006045,Regresion lineal,1.8,3.988429928230292,Gradient Boosting,2.9,,,,False
 2026-09-04,823579,2026-09-04,New York Mets,690997,Nolan McLean,1,0.7968483553545683,Regresion logistica,0.6,0.9486871513093336,Regresion lineal,1.2,2.166423092567886,Gradient Boosting,1.8,,,,False
 2026-09-04,823579,2026-09-04,San Francisco Giants,683363,Matt Wilkinson,0,0.7266918172504165,Regresion logistica,1.0,1.6541446015929002,Regresion lineal,0.6666666666666666,2.114441936538507,Gradient Boosting,1.6666666666666667,,,,False
+2026-09-04,823905,2026-09-04,Washington Nationals,800600,Jackson Kent,0,0.5373495166232046,Regresion logistica,0.5,1.9372501852290256,Regresion lineal,1.75,4.067187899560332,Gradient Boosting,3.25,,,,False
+2026-09-04,823905,2026-09-04,Los Angeles Dodgers,605483,Blake Snell,1,0.7743560364494034,Regresion logistica,0.8,1.2091286555759213,Regresion lineal,1.4,2.0925701519392526,Gradient Boosting,1.8,,,,False
