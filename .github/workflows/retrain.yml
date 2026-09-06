@@ -6,14 +6,26 @@ name: Reentrenar modelos MLB
 # (elimina el riesgo de quedarse sin memoria que tenia en Streamlit Cloud).
 #
 # Se puede disparar de 3 formas:
-#   1. Solo, cada 3 dias (cron de abajo).
+#   1. Solo, todos los dias (cron de abajo) - pero retrain_pipeline.py se
+#      auto-frena y no hace nada si el ultimo reentrenamiento fue hace
+#      menos de 3 dias (--min-days-between, default 3), asi que en la
+#      practica reentrena cada ~3 dias como se queria.
 #   2. A mano desde GitHub: pestana "Actions" -> "Reentrenar modelos MLB" ->
 #      "Run workflow".
 #   3. A mano desde la terminal: gh workflow run retrain.yml
-
+#
+# Por que diario y no "cron cada 3 dias" directo: la sintaxis obvia
+# ("0 9 */3 * *") NO significa "cada 3 dias desde hoy" - en el campo de
+# dia-del-mes de cron, */3 se cuenta desde el dia 1 del mes (dias 1,4,7...),
+# lo cual ademas se corta feo en el cambio de mes. Ademas, GitHub retrasa o
+# de plano SALTA corridas programadas sin avisar durante picos de carga -
+# con un disparo cada 3 dias exacto, un solo salto deja el modelo
+# desactualizado varios dias de mas sin que nadie se de cuenta. Con un
+# disparo diario + el freno de --min-days-between, el peor caso de un salto
+# es reentrenar un dia tarde, no varios.
 on:
   schedule:
-    - cron: "0 9 */3 * *"  # 09:00 UTC (~03:00 hora de Mexico) cada 3er dia del mes
+    - cron: "0 9 * * *"  # 09:00 UTC (~03:00 hora de Mexico) todos los dias
   workflow_dispatch: {}
 
 permissions:

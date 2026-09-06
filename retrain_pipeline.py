@@ -31,8 +31,25 @@ dia para otro.
 """
 
 import argparse
+import csv
 import subprocess
 import sys
+from datetime import datetime
+
+
+def days_since_last_retrain(history_path="training_history.csv"):
+    """Dias transcurridos desde el timestamp de la ULTIMA fila de
+    training_history.csv - None si el archivo no existe o esta vacio
+    (nunca se ha reentrenado, no hay razon para saltarse nada)."""
+    try:
+        with open(history_path, "r", encoding="utf-8", newline="") as f:
+            rows = list(csv.DictReader(f))
+    except FileNotFoundError:
+        return None
+    if not rows:
+        return None
+    last_ts = datetime.fromisoformat(rows[-1]["timestamp"])
+    return (datetime.now() - last_ts).total_seconds() / 86400
 
 
 def run(cmd, description):
@@ -52,7 +69,23 @@ def main():
     parser.add_argument("--skip-collect", action="store_true",
                          help="No recolectar de nuevo (usa el training_data.csv que ya exista) - "
                               "solo reentrena con lo que ya tienes")
+    parser.add_argument("--min-days-between", type=float, default=3,
+                         help="No reentrena si el ultimo reentrenamiento (segun training_history.csv) "
+                              "fue hace menos de N dias (default 3). Se usa junto con un disparador "
+                              "DIARIO en GitHub Actions (ver retrain.yml) en vez de tratar de acertarle "
+                              "a un cron de 'cada 3 dias' exacto - GitHub a veces retrasa o salta "
+                              "corridas programadas sin avisar, y con un disparador diario + este freno "
+                              "el peor caso es reentrenar un dia mas tarde, no varios dias de mas.")
+    parser.add_argument("--force", action="store_true",
+                         help="Ignora --min-days-between y reentrena de todos modos")
     args = parser.parse_args()
+
+    if not args.force:
+        days = days_since_last_retrain()
+        if days is not None and days < args.min_days_between:
+            print(f"Ultimo reentrenamiento hace {days:.1f} dia(s) (< {args.min_days_between}) - "
+                  f"se omite esta corrida. Usa --force para reentrenar de todos modos.")
+            return
 
     if not args.skip_evaluate:
         run(["ml_track.py", "--evaluate"], "PASO 1/5: Evaluando predicciones pasadas vs. resultado real")

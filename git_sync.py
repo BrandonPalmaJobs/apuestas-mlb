@@ -26,7 +26,7 @@ def _run(args, cwd):
     return subprocess.run(args, cwd=cwd, capture_output=True, text=True)
 
 
-def commit_and_push(paths, message, secrets, cwd):
+def commit_and_push(paths, message, secrets, cwd, max_retries=3):
     """Hace commit y push de `paths` (rutas relativas a `cwd`) al repo
     configurado en los secrets. No toca la config global de git ni el
     remote 'origin' - arma la URL de push con el token solo para este
@@ -58,8 +58,26 @@ def commit_and_push(paths, message, secrets, cwd):
     branch_res = _run(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd)
     branch = branch_res.stdout.strip() or "main"
 
-    push = _run(["git", "push", remote, f"HEAD:{branch}"], cwd)
-    if push.returncode != 0:
-        return False, f"git push fallo: {push.stderr.strip()}"
+    push = None
+    for attempt in range(max_retries):
+        push = _run(["git", "push", remote, f"HEAD:{branch}"], cwd)
+        if push.returncode == 0:
+            return True, f"Guardado en GitHub ({repo}, rama {branch})."
 
-    return True, f"Guardado en GitHub ({repo}, rama {branch})."
+        # El remoto avanzo desde que este contenedor de Streamlit clono el
+        # repo (ej. el reentrenamiento de GitHub Actions subio un commit
+        # mientras la app seguia corriendo) - un push directo se rechaza
+        # (non-fast-forward). Se trae ese cambio con rebase (reordena el
+        # commit local encima, no lo pisa) y se reintenta, en vez de
+        # fallar directo con el error crudo de git como antes.
+        fetch = _run(["git", "fetch", remote, branch], cwd)
+        if fetch.returncode != 0:
+            return False, f"git push fallo: {push.stderr.strip()} | git fetch tambien fallo: {fetch.stderr.strip()}"
+
+        rebase = _run(["git", "rebase", "FETCH_HEAD"], cwd)
+        if rebase.returncode != 0:
+            _run(["git", "rebase", "--abort"], cwd)
+            return False, (f"git push fallo: {push.stderr.strip()} | no se pudo combinar automaticamente con "
+                            f"los cambios nuevos del remoto (conflicto real de contenido): {rebase.stderr.strip()}")
+
+    return False, f"git push fallo despues de {max_retries} intentos: {push.stderr.strip()}"
