@@ -14,6 +14,7 @@ Correr localmente para probar:
 """
 
 import json
+import math
 import os
 import subprocess
 import sys
@@ -157,15 +158,61 @@ def _merge_batter_detail(lineup_detail, players, season, opposing_pitcher_hand):
         player.update(extra)
 
 
+# Para estas dos lineas, el clasificador conjunto (entrenado directo sobre
+# el par de pitchers) resulto una senal debil en el backtest (Brier ~0.246,
+# casi igual a una moneda al aire - ver training_history_matchup.csv). En
+# vez de usarlo, se suman las predicciones INDIVIDUALES de cada pitcher
+# (los mismos modelos que ya se muestran en cada tarjeta - "Carreras
+# permitidas - entradas 1-3/1-5", con mucho mejor track record real segun
+# ml_track.py --evaluate: MAE ~1.4/~1.8 y bien calibrados en promedio)
+# contra la misma linea que ya traia entrenada el modelo conjunto.
+INDIVIDUAL_TOTAL_MODELS = {
+    "model_1to3_total.joblib": ("ml_prediction_1to3", "model_1to3.joblib"),
+    "model_1to5_total.joblib": ("ml_prediction_1to5", "model_1to5.joblib"),
+}
+
+
+def _model_rmse(model_path, model_name):
+    """RMSE del modelo ganador, leido de <model_path>.metrics.json (ya lo
+    guarda ml_train.py al lado de cada .joblib)."""
+    try:
+        with open(model_path + ".metrics.json") as f:
+            metrics = json.load(f)
+    except Exception:
+        return None
+    for entry in metrics:
+        if entry.get("modelo") == model_name:
+            return entry.get("rmse")
+    return None
+
+
+def _over_prob_from_sum(runs_home, runs_away, model_path, model_name, threshold):
+    """Convierte la SUMA de dos predicciones individuales (ya validadas) en
+    una probabilidad aproximada de superar `threshold`, asumiendo error
+    normal alrededor de esa suma (RMSE del modelo individual, combinado
+    asumiendo independencia entre ambos pitchers: rmse*sqrt(2)). Es una
+    aproximacion documentada para poder ordenar/mostrar un % junto a los
+    demas picks - no una probabilidad calibrada por un clasificador real
+    como las otras."""
+    if runs_home is None or runs_away is None or threshold is None:
+        return None, runs_home if runs_home is not None else runs_away
+    total_pred = runs_home + runs_away
+    rmse = _model_rmse(model_path, model_name)
+    if not rmse:
+        return None, total_pred
+    combined_rmse = rmse * math.sqrt(2)
+    z = (total_pred - threshold) / combined_rmse
+    prob_over = 1 / (1 + math.exp(-z))
+    return prob_over, total_pred
+
+
 def compute_picks(report_a, report_b, is_home_a):
     """Junta las predicciones YA calculadas de 0-carreras-1er-inning por
-    pitcher con las de los 6 modelos conjuntos (favorito y total de
-    carreras 1-3/1-5, total 1er inning, y money line - ganador del juego
-    completo), en una sola lista de picks candidatos ordenada de mas a
-    menos confianza. Todos son modelos entrenados con probabilidad
-    calibrada - ya no hay ningun pick estimado solo por formula sin
-    validar (el money line via formula de ofensiva proyectada se quito
-    por eso mismo)."""
+    pitcher con las de los modelos conjuntos (favorito y total 1er inning,
+    hándicap y money line - ganador del juego completo) y los totales de
+    1-3/1-5 innings (derivados de sumar las predicciones individuales, ver
+    INDIVIDUAL_TOTAL_MODELS arriba), en una sola lista de picks candidatos
+    ordenada de mas a menos confianza."""
     picks = []
 
     for rep in (report_a, report_b):
@@ -185,11 +232,35 @@ def compute_picks(report_a, report_b, is_home_a):
         features_home, features_away = (features_a, features_b) if is_home_a else (features_b, features_a)
         team_home_name = report_a["team_name"] if is_home_a else report_b["team_name"]
         team_away_name = report_b["team_name"] if is_home_a else report_a["team_name"]
+        pitcher_a = report_a.get("pitcher") or {}
+        pitcher_b = report_b.get("pitcher") or {}
+        pitcher_home, pitcher_away = (pitcher_a, pitcher_b) if is_home_a else (pitcher_b, pitcher_a)
 
         for filename, label, kind in MATCHUP_MODELS:
-            bundle = load_bundle(os.path.join(APP_DIR, filename))
+            model_path = os.path.join(APP_DIR, filename)
+            bundle = load_bundle(model_path)
             if not bundle:
                 continue
+
+            individual = INDIVIDUAL_TOTAL_MODELS.get(filename)
+            if individual:
+                pred_key, indiv_filename = individual
+                mlp_home = pitcher_home.get(pred_key) or {}
+                mlp_away = pitcher_away.get(pred_key) or {}
+                threshold = bundle.get("threshold")
+                prob, total_pred = _over_prob_from_sum(
+                    mlp_home.get("runs"), mlp_away.get("runs"),
+                    os.path.join(APP_DIR, indiv_filename), mlp_home.get("model_name"), threshold)
+                if total_pred is None:
+                    continue
+                over = (total_pred > threshold) if threshold is not None else None
+                linea = f" {threshold}" if threshold is not None else ""
+                pick_text = f"{'Over' if over else 'Under'}{linea} (predicho: {total_pred:.2f})"
+                confidence = (prob if over else 1 - prob) if prob is not None else None
+                picks.append({"label": label, "pick": pick_text,
+                               "confidence": confidence if confidence is not None else 0.5})
+                continue
+
             try:
                 prob = predict_matchup(features_home, features_away, bundle)
             except Exception:
