@@ -419,3 +419,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-08,824957,2026-09-08,Athletics,678022,Jack Perkins,1,0.6838074165271573,Regresion logistica,0.6,2.1000769643800785,Regresion lineal,2.7,3.1915908061465794,Regresion lineal,4.1,,,,False
 2026-09-08,823250,2026-09-08,Washington Nationals,683000,Riley Cornelio,0,,,,,,,,,,,,,False
 2026-09-08,823250,2026-09-08,San Diego Padres,663554,Casey Mize,1,0.748413039329485,Regresion logistica,0.9,1.2629388682592733,Regresion lineal,1.7,2.3648004841459827,Regresion lineal,3.5,,,,False
+2026-09-08,823092,2026-09-08,Texas Rangers,615698,Cal Quantrill,0,0.8082164384597258,Regresion logistica,0.8,0.906417278137761,Regresion lineal,1.2,1.9642499982468875,Regresion lineal,1.8,,,,False
+2026-09-08,823092,2026-09-08,Seattle Mariners,682243,Bryce Miller,1,0.7674372165941095,Regresion logistica,0.7,1.0603056639505049,Regresion lineal,1.8,2.0730442834302885,Regresion lineal,3.5,,,,False
