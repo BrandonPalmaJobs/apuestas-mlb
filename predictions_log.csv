@@ -427,3 +427,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-09,824226,2026-09-09,Detroit Tigers,672456,Keider Montero,1,0.7381517309693354,Regresion logistica,0.6,0.9956245587055668,Regresion lineal,1.0,1.7314169501597427,Regresion lineal,2.2,,,,False
 2026-09-09,824956,2026-09-09,Toronto Blue Jays,680755,Braydon Fisher,0,0.906399643039239,Regresion logistica,1.0,1.5246993778042928,Regresion lineal,0.375,2.530425904671944,Regresion lineal,0.875,,,,False
 2026-09-09,824956,2026-09-09,Athletics,669620,Brady Basso,1,0.7468194055729122,Regresion logistica,0.5,1.6763480936501434,Regresion lineal,1.5,2.1359309031779814,Regresion lineal,2.75,,,,False
+2026-09-09,823251,2026-09-09,Washington Nationals,800600,Jackson Kent,0,0.617748864737313,Regresion logistica,0.6,1.7813851307045672,Regresion lineal,2.0,2.791822155775879,Regresion lineal,3.4,,,,False
+2026-09-09,823251,2026-09-09,San Diego Padres,621111,Walker Buehler,1,0.7584460951567372,Regresion logistica,0.8,1.2256426339191433,Regresion lineal,1.9,2.1992361593732492,Regresion lineal,2.0,,,,False
