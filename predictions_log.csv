@@ -425,3 +425,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-08,823901,2026-09-08,Cincinnati Reds,666157,Nick Lodolo,0,0.6312097339558793,Regresion logistica,0.7,1.7593803246778308,Regresion lineal,1.3,2.433938858498035,Regresion lineal,2.4,,,,False
 2026-09-09,824226,2026-09-09,Minnesota Twins,805673,Zebby Matthews,0,0.6864044786636453,Regresion logistica,0.5,1.2264565671019194,Regresion lineal,2.1,2.2769555453549506,Regresion lineal,3.3,,,,False
 2026-09-09,824226,2026-09-09,Detroit Tigers,672456,Keider Montero,1,0.7381517309693354,Regresion logistica,0.6,0.9956245587055668,Regresion lineal,1.0,1.7314169501597427,Regresion lineal,2.2,,,,False
+2026-09-09,824956,2026-09-09,Toronto Blue Jays,680755,Braydon Fisher,0,0.906399643039239,Regresion logistica,1.0,1.5246993778042928,Regresion lineal,0.375,2.530425904671944,Regresion lineal,0.875,,,,False
+2026-09-09,824956,2026-09-09,Athletics,669620,Brady Basso,1,0.7468194055729122,Regresion logistica,0.5,1.6763480936501434,Regresion lineal,1.5,2.1359309031779814,Regresion lineal,2.75,,,,False
