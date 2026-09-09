@@ -437,3 +437,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-09,824713,2026-09-09,Boston Red Sox,687562,Jake Bennett,1,0.7993065330850372,Regresion logistica,0.8,1.0321416316672694,Regresion lineal,1.0,2.016848400509974,Regresion lineal,2.2,,,,False
 2026-09-09,823497,2026-09-09,Colorado Rockies,608372,Tomoyuki Sugano,0,0.6729254126398386,Regresion logistica,0.5,1.8320366248083475,Regresion lineal,2.8,3.10833894518787,Regresion lineal,3.7,,,,False
 2026-09-09,823497,2026-09-09,New York Yankees,701542,Will Warren,1,0.7440760843926135,Regresion logistica,0.6,1.5691924918149267,Regresion lineal,1.8,2.668400725059163,Regresion lineal,2.7,,,,False
+2026-09-09,823739,2026-09-09,Chicago Cubs,592332,Kevin Gausman,0,0.6554123771643889,Regresion logistica,0.8,1.8436418485234125,Regresion lineal,1.4,2.611277779143288,Regresion lineal,3.1,,,,False
+2026-09-09,823739,2026-09-09,Milwaukee Brewers,701656,Logan Henderson,1,0.763128561655141,Regresion logistica,0.9,1.137583732411854,Regresion lineal,0.7,2.093337114798354,Regresion lineal,1.2,,,,False
