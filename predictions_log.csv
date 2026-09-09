@@ -439,3 +439,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-09,823497,2026-09-09,New York Yankees,701542,Will Warren,1,0.7440760843926135,Regresion logistica,0.6,1.5691924918149267,Regresion lineal,1.8,2.668400725059163,Regresion lineal,2.7,,,,False
 2026-09-09,823739,2026-09-09,Chicago Cubs,592332,Kevin Gausman,0,0.6554123771643889,Regresion logistica,0.8,1.8436418485234125,Regresion lineal,1.4,2.611277779143288,Regresion lineal,3.1,,,,False
 2026-09-09,823739,2026-09-09,Milwaukee Brewers,701656,Logan Henderson,1,0.763128561655141,Regresion logistica,0.9,1.137583732411854,Regresion lineal,0.7,2.093337114798354,Regresion lineal,1.2,,,,False
+2026-09-09,823900,2026-09-09,Los Angeles Dodgers,808967,Yoshinobu Yamamoto,1,0.8151634939573195,Regresion logistica,0.7,0.9328422052464448,Regresion lineal,0.5,1.7084512036138313,Regresion lineal,0.9,,,,False
+2026-09-09,823900,2026-09-09,Cincinnati Reds,695076,Rhett Lowder,0,0.5799933382140456,Regresion logistica,0.7,1.9816690362883032,Regresion lineal,1.8,2.921324780045736,Regresion lineal,3.5,,,,False
