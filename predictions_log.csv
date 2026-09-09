@@ -433,3 +433,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-09,823090,2026-09-09,Seattle Mariners,807739,Kade Anderson,1,0.7043932103270182,Regresion logistica,0.6666666666666666,1.680470881466348,Regresion lineal,0.6666666666666666,2.7703541416883235,Regresion lineal,2.333333333333333,,,,False
 2026-09-09,823416,2026-09-09,Houston Astros,686613,Hunter Brown,0,0.6802860525170548,Regresion logistica,0.8,1.679222126785549,Regresion lineal,1.0,2.619237138409772,Regresion lineal,1.6,,,,False
 2026-09-09,823416,2026-09-09,Philadelphia Phillies,650911,Cristopher Sánchez,1,0.790289335999526,Regresion logistica,0.9,1.4551147605573314,Regresion lineal,0.5,2.5306846727333125,Regresion lineal,1.3,,,,False
+2026-09-09,824713,2026-09-09,Los Angeles Angels,696270,Ryan Johnson,0,0.7303037816975327,Regresion logistica,0.8,1.807996469411128,Regresion lineal,1.4,2.9669755865063423,Regresion lineal,2.5,,,,False
+2026-09-09,824713,2026-09-09,Boston Red Sox,687562,Jake Bennett,1,0.7993065330850372,Regresion logistica,0.8,1.0321416316672694,Regresion lineal,1.0,2.016848400509974,Regresion lineal,2.2,,,,False
