@@ -441,3 +441,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-09,823739,2026-09-09,Milwaukee Brewers,701656,Logan Henderson,1,0.763128561655141,Regresion logistica,0.9,1.137583732411854,Regresion lineal,0.7,2.093337114798354,Regresion lineal,1.2,,,,False
 2026-09-09,823900,2026-09-09,Los Angeles Dodgers,808967,Yoshinobu Yamamoto,1,0.8151634939573195,Regresion logistica,0.7,0.9328422052464448,Regresion lineal,0.5,1.7084512036138313,Regresion lineal,0.9,,,,False
 2026-09-09,823900,2026-09-09,Cincinnati Reds,695076,Rhett Lowder,0,0.5799933382140456,Regresion logistica,0.7,1.9816690362883032,Regresion lineal,1.8,2.921324780045736,Regresion lineal,3.5,,,,False
+2026-09-10,823413,2026-09-10,Houston Astros,664299,Cristian Javier,0,0.6600789258316309,Regresion logistica,0.8888888888888888,1.8388587321100225,Regresion lineal,1.8888888888888888,3.1958079604501632,Regresion lineal,5.0,,,,False
+2026-09-10,823413,2026-09-10,Philadelphia Phillies,554430,Zack Wheeler,1,0.8003003494786988,Regresion logistica,0.7,1.4781165919875048,Regresion lineal,1.7,2.603653692430598,Regresion lineal,2.7,,,,False
