@@ -449,3 +449,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-10,824550,2026-09-10,Chicago White Sox,696146,Hagen Smith,1,,,,,,,,,,,,,False
 2026-09-10,823499,2026-09-10,Colorado Rockies,663372,Ryan Feltner,0,0.6227329030144257,Regresion logistica,0.6,2.164431461849382,Regresion lineal,2.5,3.451400555661035,Regresion lineal,4.2,,,,False
 2026-09-10,823499,2026-09-10,New York Yankees,608331,Max Fried,1,0.8190766034288439,Regresion logistica,0.8,1.0939892117436931,Regresion lineal,1.6,1.6047869724148056,Regresion lineal,2.1,,,,False
+2026-09-11,824711,2026-09-11,Kansas City Royals,607625,Seth Lugo,0,0.6533162079157266,Regresion logistica,0.5,1.7108140171127018,Regresion lineal,1.7,2.335930814221137,Gradient Boosting,3.0,,,,False
+2026-09-11,824711,2026-09-11,Boston Red Sox,543243,Sonny Gray,1,0.803697288523097,Regresion logistica,0.9,1.108468615423044,Regresion lineal,1.1,2.118653494761731,Gradient Boosting,1.7,,,,False
