@@ -455,3 +455,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-11,823817,2026-09-11,Miami Marlins,687473,Ryan Gusto,1,0.7899171213637229,Regresion logistica,0.8,1.3262140041930108,Regresion lineal,1.3,2.294361133732422,Gradient Boosting,2.7,,,,False
 2026-09-11,822930,2026-09-11,Tampa Bay Rays,656876,Drew Rasmussen,1,0.812292183069526,Regresion logistica,1.0,1.286980453388526,Regresion lineal,0.8,1.599807799022718,Gradient Boosting,1.7,,,,False
 2026-09-11,822930,2026-09-11,Houston Astros,699044,Miguel Ullola,0,,,,,,,,,,,,,False
+2026-09-11,824873,2026-09-11,Philadelphia Phillies,605400,Aaron Nola,0,0.6799139072689636,Regresion logistica,0.7,1.6366020302899775,Regresion lineal,1.1,2.1300213291684567,Gradient Boosting,1.3,,,,False
+2026-09-11,824873,2026-09-11,Atlanta Braves,519242,Chris Sale,1,0.8228135755713288,Regresion logistica,0.9,1.105431289035052,Regresion lineal,0.8,1.7894151188804348,Gradient Boosting,1.2,,,,False
