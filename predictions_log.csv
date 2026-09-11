@@ -464,3 +464,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-11,823817,2026-09-11,Los Angeles Dodgers,605483,Blake Snell,0,0.7398485112585091,Regresion logistica,0.8333333333333334,1.0970921156622937,Regresion lineal,1.1666666666666667,1.6719344664698383,Gradient Boosting,1.5,,,,False
 2026-09-11,823736,2026-09-11,Cincinnati Reds,671096,Andrew Abbott,0,0.7167582304958662,Regresion logistica,0.6,1.29615683414525,Regresion lineal,1.9,2.4882546310631786,Gradient Boosting,3.1,,,,False
 2026-09-11,823736,2026-09-11,Milwaukee Brewers,669160,Dustin May,1,0.831698050785382,Regresion logistica,0.8,1.0530174344101435,Regresion lineal,1.6,2.0533622334753265,Gradient Boosting,2.5,,,,False
+2026-09-11,823659,2026-09-11,Cleveland Guardians,800048,Parker Messick,0,0.7031044686253629,Regresion logistica,0.7,1.0722813872350838,Regresion lineal,0.6,2.3501602118592206,Gradient Boosting,1.2,,,,False
+2026-09-11,823659,2026-09-11,Minnesota Twins,671737,Taj Bradley,1,0.7464528222111342,Regresion logistica,0.5,1.127638964161902,Regresion lineal,1.5,1.9437663556378477,Gradient Boosting,2.3,,,,False
