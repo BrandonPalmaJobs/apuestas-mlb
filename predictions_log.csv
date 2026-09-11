@@ -451,3 +451,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-10,823499,2026-09-10,New York Yankees,608331,Max Fried,1,0.8190766034288439,Regresion logistica,0.8,1.0939892117436931,Regresion lineal,1.6,1.6047869724148056,Regresion lineal,2.1,,,,False
 2026-09-11,824711,2026-09-11,Kansas City Royals,607625,Seth Lugo,0,0.6533162079157266,Regresion logistica,0.5,1.7108140171127018,Regresion lineal,1.7,2.335930814221137,Gradient Boosting,3.0,,,,False
 2026-09-11,824711,2026-09-11,Boston Red Sox,543243,Sonny Gray,1,0.803697288523097,Regresion logistica,0.9,1.108468615423044,Regresion lineal,1.1,2.118653494761731,Gradient Boosting,1.7,,,,False
+2026-09-11,823817,2026-09-11,Los Angeles Dodgers,808967,Yoshinobu Yamamoto,0,0.7256867015946312,Regresion logistica,0.7,1.1461493640672151,Regresion lineal,0.5,1.8670936099103537,Gradient Boosting,1.0,,,,False
+2026-09-11,823817,2026-09-11,Miami Marlins,687473,Ryan Gusto,1,0.7899171213637229,Regresion logistica,0.8,1.3262140041930108,Regresion lineal,1.3,2.294361133732422,Gradient Boosting,2.7,,,,False
