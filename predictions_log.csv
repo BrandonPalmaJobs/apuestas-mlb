@@ -460,4 +460,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-11,824631,2026-09-11,Pittsburgh Pirates,696062,Wilber Dotel,0,,,,,,,,,,,,,False
 2026-09-11,824631,2026-09-11,Chicago Cubs,684007,Shota Imanaga,1,0.7980179699226698,Regresion logistica,0.7,0.921375401020326,Regresion lineal,0.6,1.8220171155268008,Gradient Boosting,1.9,,,,False
 2026-09-11,824227,2026-09-11,Colorado Rockies,690279,Mason Adams,0,0.7565419387168497,Regresion logistica,1.0,1.6028166113389322,Regresion lineal,1.0,2.78359780231188,Gradient Boosting,2.0,,,,False
-2026-09-11,824227,2026-09-11,Detroit Tigers,664285,Framber Valdez,1,0.7630105866010071,Regresion logistica,0.6,0.9828919118122792,Regresion lineal,1.4,1.9838471397750794,Gradient Boosting,2.4,,,,False
+2026-09-11,824227,2026-09-11,Detroit Tigers,664285,Framber Valdez,1,0.7630105866010071,Regresion logistica,0.6,0.9828919118122792,Regresion lineal,1.4,1.9838471397750796,Gradient Boosting,2.4,,,,False
+2026-09-11,823817,2026-09-11,Los Angeles Dodgers,605483,Blake Snell,0,0.7398485112585091,Regresion logistica,0.8333333333333334,1.0970921156622935,Regresion lineal,1.1666666666666667,1.6719344664698383,Gradient Boosting,1.5,,,,False
