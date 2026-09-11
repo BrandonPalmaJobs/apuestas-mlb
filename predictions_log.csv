@@ -457,3 +457,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-11,822930,2026-09-11,Houston Astros,699044,Miguel Ullola,0,,,,,,,,,,,,,False
 2026-09-11,824873,2026-09-11,Philadelphia Phillies,605400,Aaron Nola,0,0.6799139072689636,Regresion logistica,0.7,1.6366020302899775,Regresion lineal,1.1,2.1300213291684567,Gradient Boosting,1.3,,,,False
 2026-09-11,824873,2026-09-11,Atlanta Braves,519242,Chris Sale,1,0.8228135755713288,Regresion logistica,0.9,1.105431289035052,Regresion lineal,0.8,1.7894151188804348,Gradient Boosting,1.2,,,,False
+2026-09-11,824631,2026-09-11,Pittsburgh Pirates,696062,Wilber Dotel,0,,,,,,,,,,,,,False
+2026-09-11,824631,2026-09-11,Chicago Cubs,684007,Shota Imanaga,1,0.7980179699226698,Regresion logistica,0.7,0.921375401020326,Regresion lineal,0.6,1.8220171155268015,Gradient Boosting,1.9,,,,False
