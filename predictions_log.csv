@@ -476,3 +476,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-12,823170,2026-09-12,San Francisco Giants,702885,Cesar Perdomo,1,,,,,,,,,,,,,False
 2026-09-12,823819,2026-09-12,Los Angeles Dodgers,607192,Tyler Glasnow,0,0.7017196447013161,Regresion logistica,0.7,1.3705838344550754,Regresion lineal,1.2,2.5422940079305225,Gradient Boosting,1.9,,,,False
 2026-09-12,823819,2026-09-12,Miami Marlins,663969,Tyler Phillips,1,0.7792330797541722,Regresion logistica,0.6,1.3556591327021623,Regresion lineal,1.1,2.5160135566831565,Gradient Boosting,1.9,,,,False
+2026-09-12,824712,2026-09-12,Boston Red Sox,624133,Ranger Suarez,1,0.798799393786651,Regresion logistica,0.8,1.1392038134321043,Regresion lineal,1.4,2.0136188968252777,Gradient Boosting,2.6,,,,False
+2026-09-12,824712,2026-09-12,Kansas City Royals,677976,Randy Dobnak,0,0.7466607586268771,Regresion logistica,0.9,1.5101411247755576,Regresion lineal,0.6,2.382404225038493,Gradient Boosting,1.4,,,,False
