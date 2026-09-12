@@ -469,4 +469,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-12,824224,2026-09-12,Colorado Rockies,685299,Tanner Gordon,0,0.6978883311906798,Regresion logistica,0.7777777777777778,1.7874230357295655,Regresion lineal,1.5555555555555556,2.9116438367333166,Gradient Boosting,4.0,,,,False
 2026-09-12,824224,2026-09-12,Detroit Tigers,808825,Andrew Sears,1,,,,,,,,,,,,,False
 2026-09-12,823496,2026-09-12,New York Yankees,543037,Gerrit Cole,1,0.7890134421818428,Regresion logistica,0.9,1.082222376246736,Regresion lineal,0.5,2.6062377553568763,Gradient Boosting,1.1,,,,False
-2026-09-12,823496,2026-09-12,New York Mets,804267,Zac Thornton,0,0.728969693813004,Regresion logistica,0.5,1.4559560566808383,Regresion lineal,1.2,3.323980985789976,Gradient Boosting,2.2,,,,False
+2026-09-12,823496,2026-09-12,New York Mets,804267,Zac Thornton,0,0.728969693813004,Regresion logistica,0.5,1.4559560566808385,Regresion lineal,1.2,3.323980985789976,Gradient Boosting,2.2,,,,False
+2026-09-12,824630,2026-09-12,Chicago Cubs,605280,Clay Holmes,1,0.7652043329465685,Regresion logistica,0.8,1.4515761655794963,Regresion lineal,1.2,2.661349089550739,Gradient Boosting,1.9,,,,False
+2026-09-12,824630,2026-09-12,Pittsburgh Pirates,694973,Paul Skenes,0,0.6578285739346784,Regresion logistica,0.9,2.0127717127070848,Regresion lineal,1.1,2.711393327209763,Gradient Boosting,2.4,,,,False
