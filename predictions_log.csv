@@ -478,3 +478,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-12,823819,2026-09-12,Miami Marlins,663969,Tyler Phillips,1,0.7792330797541722,Regresion logistica,0.6,1.3556591327021623,Regresion lineal,1.1,2.5160135566831565,Gradient Boosting,1.9,,,,False
 2026-09-12,824712,2026-09-12,Boston Red Sox,624133,Ranger Suarez,1,0.798799393786651,Regresion logistica,0.8,1.1392038134321043,Regresion lineal,1.4,2.0136188968252777,Gradient Boosting,2.6,,,,False
 2026-09-12,824712,2026-09-12,Kansas City Royals,677976,Randy Dobnak,0,0.7466607586268771,Regresion logistica,0.9,1.5101411247755576,Regresion lineal,0.6,2.382404225038493,Gradient Boosting,1.4,,,,False
+2026-09-13,824952,2026-09-13,Seattle Mariners,682243,Bryce Miller,0,0.5901610491948568,Regresion logistica,0.6,2.211961321885047,Regresion lineal,2.0,2.8214871174625062,Gradient Boosting,4.4,,,,False
+2026-09-13,824952,2026-09-13,Athletics,682052,Jacob Lopez,1,0.80239150780833,Regresion logistica,0.8,1.11372220444873,Regresion lineal,1.0,2.8123969851371386,Gradient Boosting,1.7,,,,False
