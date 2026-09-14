@@ -491,4 +491,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-13,824708,2026-09-13,Kansas City Royals,702070,Noah Cameron,0,0.7259917853353889,Regresion logistica,0.9,1.421925566212666,Regresion lineal,1.2,2.658589690998248,Gradient Boosting,1.8,,,,False
 2026-09-13,824708,2026-09-13,Boston Red Sox,801139,Payton Tolle,1,0.7978500020640719,Regresion logistica,0.5,0.873719837808148,Regresion lineal,0.8,1.8759218720539736,Gradient Boosting,1.5,,,,False
 2026-09-14,824386,2026-09-14,Chicago White Sox,656794,Sean Newcomb,0,0.8855059606043513,Regresion logistica,1.0,0.5942380005023379,Regresion lineal,1.2,1.2740471707867551,Regresion lineal,1.6,,,,False
-2026-09-14,824386,2026-09-14,Cleveland Guardians,668909,Gavin Williams,1,0.7801750989516028,Regresion logistica,0.7,1.0980340708290681,Regresion lineal,1.0,1.7026970991005927,Regresion lineal,2.0,,,,False
+2026-09-14,824386,2026-09-14,Cleveland Guardians,668909,Gavin Williams,1,0.7801750989516028,Regresion logistica,0.7,1.098034070829068,Regresion lineal,1.0,1.7026970991005927,Regresion lineal,2.0,,,,False
+2026-09-14,824465,2026-09-14,Los Angeles Dodgers,669373,Tarik Skubal,0,0.7503826991064596,Regresion logistica,0.7,1.3041059829240864,Regresion lineal,1.2,2.250502882417458,Regresion lineal,1.5,,,,False
+2026-09-14,824465,2026-09-14,Cincinnati Reds,666157,Nick Lodolo,1,0.7279660178418944,Regresion logistica,0.6,1.4885228465679319,Regresion lineal,1.2,2.2721774558288113,Regresion lineal,2.0,,,,False
