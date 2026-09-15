@@ -506,4 +506,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-15,824384,2026-09-15,Cleveland Guardians,656492,Foster Griffin,1,0.6705946092601777,Regresion logistica,0.8,1.7008640329935123,Regresion lineal,2.6,3.019863534335488,Regresion lineal,3.0,,,,False
 2026-09-15,824384,2026-09-15,Chicago White Sox,663436,Davis Martin,0,0.6095000993591544,Regresion logistica,0.6,2.1596679156270664,Regresion lineal,2.1,2.960123156936477,Regresion lineal,3.0,,,,False
 2026-09-15,823333,2026-09-15,Milwaukee Brewers,694819,Jacob Misiorowski,0,0.7691998910384916,Regresion logistica,0.7,1.1807582079580563,Regresion lineal,1.3,2.1610812487952886,Regresion lineal,1.7,,,,False
-2026-09-15,823333,2026-09-15,Pittsburgh Pirates,669199,Lake Bachar,1,0.9104061705388024,Regresion logistica,0.7777777777777778,1.1199183579808893,Regresion lineal,0.5555555555555556,1.8646380503249094,Regresion lineal,1.2222222222222223,,,,False
+2026-09-15,823333,2026-09-15,Pittsburgh Pirates,669199,Lake Bachar,1,0.9104061705388024,Regresion logistica,0.7777777777777778,1.1199183579808891,Regresion lineal,0.5555555555555556,1.8646380503249087,Regresion lineal,1.2222222222222223,,,,False
+2026-09-15,822925,2026-09-15,Tampa Bay Rays,643377,Griffin Jax,1,0.7821809451863727,Regresion logistica,0.6,1.1500866213504894,Regresion lineal,1.7,2.168012472599325,Regresion lineal,2.5,,,,False
+2026-09-15,822925,2026-09-15,Athletics,678022,Jack Perkins,0,0.6660289650784196,Regresion logistica,0.6,1.9984823666518996,Regresion lineal,2.6,3.010746672243461,Regresion lineal,3.9,,,,False
