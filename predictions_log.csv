@@ -504,4 +504,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-15,824466,2026-09-15,Cincinnati Reds,695076,Rhett Lowder,1,0.6540396717159004,Regresion logistica,0.7,1.8707892635922343,Regresion lineal,2.0,2.863166132535209,Regresion lineal,3.8,,,,False
 2026-09-15,824384,2026-09-15,Chicago White Sox,669684,Chris Murphy,0,,,,,,,,,,,,,False
 2026-09-15,824384,2026-09-15,Cleveland Guardians,656492,Foster Griffin,1,0.6705946092601777,Regresion logistica,0.8,1.7008640329935123,Regresion lineal,2.6,3.019863534335488,Regresion lineal,3.0,,,,False
-2026-09-15,824384,2026-09-15,Chicago White Sox,663436,Davis Martin,0,0.6095000993591544,Regresion logistica,0.6,2.1596679156270664,Regresion lineal,2.1,2.9601231569364774,Regresion lineal,3.0,,,,False
+2026-09-15,824384,2026-09-15,Chicago White Sox,663436,Davis Martin,0,0.6095000993591544,Regresion logistica,0.6,2.1596679156270664,Regresion lineal,2.1,2.960123156936477,Regresion lineal,3.0,,,,False
+2026-09-15,823333,2026-09-15,Milwaukee Brewers,694819,Jacob Misiorowski,0,0.7691998910384916,Regresion logistica,0.7,1.1807582079580563,Regresion lineal,1.3,2.1610812487952886,Regresion lineal,1.7,,,,False
+2026-09-15,823333,2026-09-15,Pittsburgh Pirates,669199,Lake Bachar,1,0.9104061705388024,Regresion logistica,0.7777777777777778,1.1199183579808893,Regresion lineal,0.5555555555555556,1.8646380503249094,Regresion lineal,1.2222222222222223,,,,False
