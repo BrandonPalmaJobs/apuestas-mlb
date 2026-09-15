@@ -502,3 +502,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-14,824308,2026-09-14,Colorado Rockies,608372,Tomoyuki Sugano,1,0.7197899585952867,Regresion logistica,0.6,1.5770811526071158,Regresion lineal,2.9,2.931523128987831,Regresion lineal,3.5,,,,False
 2026-09-15,824466,2026-09-15,Los Angeles Dodgers,808967,Yoshinobu Yamamoto,0,0.680737534674096,Regresion logistica,0.7,1.2457974906563825,Regresion lineal,0.5,1.9064678284182528,Regresion lineal,1.0,,,,False
 2026-09-15,824466,2026-09-15,Cincinnati Reds,695076,Rhett Lowder,1,0.6540396717159004,Regresion logistica,0.7,1.8707892635922343,Regresion lineal,2.0,2.863166132535209,Regresion lineal,3.8,,,,False
+2026-09-15,824384,2026-09-15,Chicago White Sox,669684,Chris Murphy,0,,,,,,,,,,,,,False
+2026-09-15,824384,2026-09-15,Cleveland Guardians,656492,Foster Griffin,1,0.6705946092601777,Regresion logistica,0.8,1.7008640329935125,Regresion lineal,2.6,3.0198635343354874,Regresion lineal,3.0,,,,False
