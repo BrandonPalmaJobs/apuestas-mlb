@@ -516,4 +516,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-16,824467,2026-09-16,Los Angeles Dodgers,605483,Blake Snell,0,0.7475659825863147,Regresion logistica,0.8571428571428571,1.5777949063680634,Regresion lineal,1.0,2.549420324785811,Regresion lineal,1.2857142857142858,,,,False
 2026-09-16,824467,2026-09-16,Cincinnati Reds,671096,Andrew Abbott,1,0.6200480963069896,Regresion logistica,0.6,1.833191380649228,Regresion lineal,2.5,3.0201030874606376,Regresion lineal,4.4,,,,False
 2026-09-16,823332,2026-09-16,Milwaukee Brewers,701656,Logan Henderson,0,0.7515919894563862,Regresion logistica,0.9,1.354746761207844,Regresion lineal,0.7,2.2495434176001337,Regresion lineal,1.2,,,,False
-2026-09-16,823332,2026-09-16,Pittsburgh Pirates,683003,Jared Jones,1,0.821957953833246,Regresion logistica,0.9,1.4851798914348817,Regresion lineal,1.0,2.46579818219286,Regresion lineal,2.5,,,,False
+2026-09-16,823332,2026-09-16,Pittsburgh Pirates,683003,Jared Jones,1,0.821957953833246,Regresion logistica,0.9,1.4851798914348815,Regresion lineal,1.0,2.46579818219286,Regresion lineal,2.5,,,,False
+2026-09-16,823409,2026-09-25,Tampa Bay Rays,643377,Griffin Jax,0,0.7650683741796714,Regresion logistica,0.6,1.1941779422040004,Regresion lineal,1.7,2.0310821130535333,Regresion lineal,2.3,,,,False
+2026-09-16,823409,2026-09-25,Philadelphia Phillies,650911,Cristopher Sánchez,1,0.8254471489531581,Regresion logistica,0.8,0.6905401725372706,Regresion lineal,1.1,1.307253917165737,Regresion lineal,2.0,,,,False
