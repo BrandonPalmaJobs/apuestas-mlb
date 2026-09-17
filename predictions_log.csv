@@ -532,3 +532,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-17,824141,2026-09-17,Houston Astros,699044,Miguel Ullola,1,,,,,,,,,,,,,False
 2026-09-17,823573,2026-09-17,Philadelphia Phillies,605400,Aaron Nola,0,0.7420446396078844,Regresion logistica,0.6,1.5562884572649192,Regresion lineal,1.1,2.433252868758005,Regresion lineal,1.3,,,,False
 2026-09-17,823573,2026-09-17,New York Mets,690997,Nolan McLean,1,0.7352932933716,Regresion logistica,0.7,1.3021609685396367,Regresion lineal,1.3,2.261496412078471,Regresion lineal,2.0,,,,False
+2026-09-17,822845,2026-09-17,Boston Red Sox,543243,Sonny Gray,0,0.6811072652344509,Regresion logistica,0.8,1.5683978106126035,Regresion lineal,1.3,2.395391281507358,Regresion lineal,1.9,,,,False
+2026-09-17,822845,2026-09-17,Texas Rangers,641302,Tyler Alexander,1,0.9020747191946723,Regresion logistica,1.0,0.7219858657638968,Regresion lineal,0.25,1.0623024314851326,Regresion lineal,1.5,,,,False
