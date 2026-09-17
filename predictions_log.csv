@@ -523,3 +523,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-16,822926,2026-09-16,Athletics,669620,Brady Basso,0,0.7925948045453997,Regresion logistica,0.6,1.2815476573728497,Regresion lineal,1.2,1.6258663418548576,Regresion lineal,2.2,,,,False
 2026-09-16,822680,2026-09-16,Philadelphia Phillies,554430,Zack Wheeler,0,0.7363435410799906,Regresion logistica,0.7,1.7759256816478255,Regresion lineal,1.8,2.934107564746503,Regresion lineal,2.8,,,,False
 2026-09-16,822680,2026-09-16,Washington Nationals,688692,Jared Simpson,1,,,,,,,,,,,,,False
+2026-09-17,823334,2026-09-17,Milwaukee Brewers,690986,Kyle Harrison,0,0.6600472470731548,Regresion logistica,0.7,1.6411293699279317,Regresion lineal,2.0,2.634538904980092,Regresion lineal,3.6,,,,False
+2026-09-17,823334,2026-09-17,Pittsburgh Pirates,696062,Wilber Dotel,1,,,,,,,,,,,,,False
