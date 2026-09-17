@@ -525,3 +525,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-16,822680,2026-09-16,Washington Nationals,688692,Jared Simpson,1,,,,,,,,,,,,,False
 2026-09-17,823334,2026-09-17,Milwaukee Brewers,690986,Kyle Harrison,0,0.6600472470731548,Regresion logistica,0.7,1.6411293699279317,Regresion lineal,2.0,2.634538904980092,Regresion lineal,3.6,,,,False
 2026-09-17,823334,2026-09-17,Pittsburgh Pirates,696062,Wilber Dotel,1,,,,,,,,,,,,,False
+2026-09-17,824464,2026-09-17,Los Angeles Dodgers,680736,Justin Wrobleski,0,0.6120434853105164,Regresion logistica,0.6,1.9992890012928293,Regresion lineal,1.7,3.2070867912825785,Regresion lineal,2.7,,,,False
+2026-09-17,824464,2026-09-17,Cincinnati Reds,663903,Brady Singer,1,0.5914465336630268,Regresion logistica,0.7,2.123063825131757,Regresion lineal,1.6,3.389055723158041,Regresion lineal,4.6,,,,False
