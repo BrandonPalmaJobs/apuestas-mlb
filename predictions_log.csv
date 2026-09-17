@@ -530,3 +530,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-17,824141,2026-09-17,Kansas City Royals,607625,Seth Lugo,0,0.6087296392791184,Regresion logistica,0.5,1.7672768452093424,Regresion lineal,1.7,2.6863424924144232,Regresion lineal,3.0,,,,False
 2026-09-17,824141,2026-09-17,Houston Astros,664299,Cristian Javier,1,0.7422890412032991,Regresion logistica,0.9,1.4645391802778172,Regresion lineal,1.6,2.4353621762185025,Regresion lineal,4.2,,,,False
 2026-09-17,824141,2026-09-17,Houston Astros,699044,Miguel Ullola,1,,,,,,,,,,,,,False
+2026-09-17,823573,2026-09-17,Philadelphia Phillies,605400,Aaron Nola,0,0.7420446396078844,Regresion logistica,0.6,1.5562884572649192,Regresion lineal,1.1,2.433252868758005,Regresion lineal,1.3,,,,False
+2026-09-17,823573,2026-09-17,New York Mets,690997,Nolan McLean,1,0.7352932933716,Regresion logistica,0.7,1.3021609685396367,Regresion lineal,1.3,2.261496412078471,Regresion lineal,2.0,,,,False
