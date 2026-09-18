@@ -544,3 +544,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-18,823331,2026-09-18,Pittsburgh Pirates,694973,Paul Skenes,1,0.7006414748358258,Regresion logistica,0.8,1.3821582388938776,Regresion lineal,1.3,2.5175812097471177,Regresion lineal,2.4,,,,False
 2026-09-18,824790,2026-09-18,Milwaukee Brewers,669160,Dustin May,0,0.7360921361349535,Regresion logistica,0.8,1.5186054444412165,Regresion lineal,1.5,2.463261098313065,Regresion lineal,2.3,,,,False
 2026-09-18,824790,2026-09-18,Baltimore Orioles,605135,Chris Bassitt,1,0.8013108648222956,Regresion logistica,0.8,1.2271503330673692,Regresion lineal,1.9,2.3201398713990544,Regresion lineal,2.6,,,,False
+2026-09-18,824383,2026-09-18,Athletics,686930,Mason Barnett,0,0.4021022355752721,Regresion logistica,0.25,2.387439326617657,Regresion lineal,2.5,3.486240649602611,Regresion lineal,5.0,,,,False
+2026-09-18,824383,2026-09-18,Cleveland Guardians,682982,Daniel Espino,1,,,,,,,,,,,,,False
