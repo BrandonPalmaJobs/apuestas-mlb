@@ -553,4 +553,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-18,823252,2026-09-18,San Diego Padres,601713,Nick Pivetta,1,0.8602635576026813,Regresion logistica,0.8333333333333334,0.8404391981864571,Regresion lineal,1.3333333333333333,1.5165795457364533,Regresion lineal,2.5,,,,False
 2026-09-18,823252,2026-09-18,Miami Marlins,663969,Tyler Phillips,0,0.8251050135079091,Regresion logistica,0.5,1.1094067398363388,Regresion lineal,1.3,2.032330743532084,Regresion lineal,2.1,,,,False
 2026-09-18,823898,2026-09-18,San Francisco Giants,702885,Cesar Perdomo,0,,,,,,,,,,,,,False
-2026-09-18,823898,2026-09-18,Los Angeles Dodgers,607192,Tyler Glasnow,1,0.8061637865839989,Regresion logistica,0.8,1.0619283658024579,Regresion lineal,1.3,1.8565305445005227,Regresion lineal,2.1,,,,False
+2026-09-18,823898,2026-09-18,Los Angeles Dodgers,607192,Tyler Glasnow,1,0.8061637865839989,Regresion logistica,0.8,1.061928365802458,Regresion lineal,1.3,1.856530544500523,Regresion lineal,2.1,,,,False
+2026-09-18,824463,2026-09-18,Chicago Cubs,605280,Clay Holmes,0,0.7675775661645364,Regresion logistica,0.8,1.2940196399525616,Regresion lineal,1.2,2.089757491843041,Regresion lineal,1.9,,,,False
+2026-09-18,824463,2026-09-18,Cincinnati Reds,695505,Chase Burns,1,0.8017169112691958,Regresion logistica,0.7,1.2011703258538713,Regresion lineal,1.5,2.1384579165055113,Regresion lineal,2.2,,,,False
