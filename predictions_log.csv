@@ -542,3 +542,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-18,823977,2026-09-18,Los Angeles Angels,700712,Walbert Ureña,1,0.7980979279453652,Regresion logistica,0.9,1.138895671663465,Regresion lineal,1.0,2.214854634004569,Regresion lineal,2.3,,,,False
 2026-09-18,823331,2026-09-18,Kansas City Royals,677976,Randy Dobnak,0,0.7198408853133675,Regresion logistica,0.9,1.5178674757508714,Regresion lineal,0.5,2.584546045308194,Regresion lineal,1.4,,,,False
 2026-09-18,823331,2026-09-18,Pittsburgh Pirates,694973,Paul Skenes,1,0.7006414748358258,Regresion logistica,0.8,1.3821582388938776,Regresion lineal,1.3,2.5175812097471177,Regresion lineal,2.4,,,,False
+2026-09-18,824790,2026-09-18,Milwaukee Brewers,669160,Dustin May,0,0.7360921361349535,Regresion logistica,0.8,1.5186054444412165,Regresion lineal,1.5,2.463261098313065,Regresion lineal,2.3,,,,False
+2026-09-18,824790,2026-09-18,Baltimore Orioles,605135,Chris Bassitt,1,0.8013108648222956,Regresion logistica,0.8,1.2271503330673692,Regresion lineal,1.9,2.3201398713990544,Regresion lineal,2.6,,,,False
