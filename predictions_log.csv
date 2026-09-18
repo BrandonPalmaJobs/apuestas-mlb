@@ -540,3 +540,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-18,823977,2026-09-18,Los Angeles Angels,680570,Grayson Rodriguez,1,0.7779730086239124,Regresion logistica,0.6,1.2580929281729918,Regresion lineal,2.6,2.5621300402508043,Regresion lineal,3.6,,,,False
 2026-09-18,823977,2026-09-18,Minnesota Twins,671737,Taj Bradley,0,0.7178770060051453,Regresion logistica,0.6,1.4045184122032937,Regresion lineal,1.0,2.1948021584354067,Regresion lineal,1.8,,,,False
 2026-09-18,823977,2026-09-18,Los Angeles Angels,700712,Walbert Ureña,1,0.7980979279453652,Regresion logistica,0.9,1.138895671663465,Regresion lineal,1.0,2.214854634004569,Regresion lineal,2.3,,,,False
+2026-09-18,823331,2026-09-18,Kansas City Royals,677976,Randy Dobnak,0,0.7198408853133675,Regresion logistica,0.9,1.5178674757508714,Regresion lineal,0.5,2.584546045308194,Regresion lineal,1.4,,,,False
+2026-09-18,823331,2026-09-18,Pittsburgh Pirates,694973,Paul Skenes,1,0.7006414748358258,Regresion logistica,0.8,1.3821582388938776,Regresion lineal,1.3,2.5175812097471177,Regresion lineal,2.4,,,,False
