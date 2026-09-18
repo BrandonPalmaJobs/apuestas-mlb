@@ -536,3 +536,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-17,822845,2026-09-17,Texas Rangers,641302,Tyler Alexander,1,0.9020747191946724,Regresion logistica,1.0,0.7219858657638968,Regresion lineal,0.25,1.0623024314851326,Regresion lineal,1.5,,,,False
 2026-09-17,823978,2026-09-17,Minnesota Twins,671737,Taj Bradley,0,0.6984840107967026,Regresion logistica,0.6,1.464380000848387,Regresion lineal,1.0,2.257153061715016,Regresion lineal,1.8,,,,False
 2026-09-17,823978,2026-09-17,Los Angeles Angels,700712,Walbert Ureña,1,0.7839025463289108,Regresion logistica,0.9,1.19491816066293,Regresion lineal,1.0,2.273198610043264,Regresion lineal,2.3,,,,False
+2026-09-18,823977,2026-09-18,Minnesota Twins,687570,Connor Prielipp,0,0.6482395062467673,Regresion logistica,0.6,1.609769704499264,Regresion lineal,1.0,2.5895473844114814,Regresion lineal,3.4,,,,False
+2026-09-18,823977,2026-09-18,Los Angeles Angels,680570,Grayson Rodriguez,1,0.7779730086239124,Regresion logistica,0.6,1.2580929281729918,Regresion lineal,2.6,2.5621300402508043,Regresion lineal,3.6,,,,False
