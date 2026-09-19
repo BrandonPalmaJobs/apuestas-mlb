@@ -562,3 +562,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-19,824545,2026-09-19,Chicago White Sox,680732,Sean Burke,1,0.8620879132457381,Regresion logistica,0.8,0.6245880601674859,Regresion lineal,1.6,1.662271204637462,Regresion lineal,2.2,,,,False
 2026-09-19,824788,2026-09-19,Milwaukee Brewers,688107,Robert Gasser,0,0.7170723080218113,Regresion logistica,0.8,1.509883868867245,Regresion lineal,1.2,2.327211388973888,Regresion lineal,3.1,,,,False
 2026-09-19,824788,2026-09-19,Baltimore Orioles,669432,Trevor Rogers,1,0.8259518106006528,Regresion logistica,1.0,0.8698354170487802,Regresion lineal,1.2,1.6992875750108332,Regresion lineal,2.5,,,,False
+2026-09-19,823571,2026-09-19,Philadelphia Phillies,691725,Andrew Painter,0,0.7060847059174427,Regresion logistica,0.4,1.3427170545174507,Regresion lineal,2.2,2.4929478658232167,Regresion lineal,2.3,,,,False
+2026-09-19,823571,2026-09-19,New York Mets,681035,Christian Scott,1,0.7958593779952484,Regresion logistica,0.8,1.0915874374363181,Regresion lineal,1.2,1.766339621409242,Regresion lineal,2.1,,,,False
