@@ -567,3 +567,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-19,822921,2026-09-19,Boston Red Sox,624133,Ranger Suarez,0,0.7467879633115089,Regresion logistica,0.9,1.249877698062669,Regresion lineal,1.3,1.9357813779967887,Regresion lineal,2.5,,,,False
 2026-09-19,822921,2026-09-19,Tampa Bay Rays,642547,Freddy Peralta,1,0.7285839322464354,Regresion logistica,0.4,1.1055581053108234,Regresion lineal,1.8,1.8225450995496184,Regresion lineal,2.8,,,,False
 2026-09-19,822921,2026-09-19,Boston Red Sox,678394,Brayan Bello,0,0.5879230323224054,Regresion logistica,0.4444444444444444,2.1955620190399348,Regresion lineal,2.7777777777777777,3.428443684625896,Regresion lineal,5.222222222222222,,,,False
+2026-09-19,824380,2026-09-19,Cleveland Guardians,676440,Tanner Bibee,1,0.6600095574392992,Regresion logistica,1.0,1.637868422127354,Regresion lineal,0.6,2.712734717270544,Regresion lineal,2.6,,,,False
+2026-09-19,824380,2026-09-19,Athletics,682052,Jacob Lopez,0,0.6478072850335257,Regresion logistica,0.8,1.4044984715631739,Regresion lineal,1.1,2.2978906673953237,Regresion lineal,1.8,,,,False
