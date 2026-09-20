@@ -572,4 +572,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-20,823570,2026-09-20,Philadelphia Phillies,650911,Cristopher Sánchez,0,0.6710861687434647,Regresion logistica,0.8,1.340018936738678,Regresion lineal,1.1,2.093454980380883,Regresion lineal,2.0,,,,False
 2026-09-20,823570,2026-09-20,New York Mets,804636,Jonah Tong,1,,,,,,,,,,,,,False
 2026-09-20,824462,2026-09-20,Chicago Cubs,656849,David Peterson,0,0.7339566833414732,Regresion logistica,0.6,1.69630567767235,Regresion lineal,0.8,2.4042895020079618,Regresion lineal,1.8,,,,False
-2026-09-20,824462,2026-09-20,Cincinnati Reds,695076,Rhett Lowder,1,0.6968947379749825,Regresion logistica,0.8,1.734685881971759,Regresion lineal,1.5,2.8480374783551716,Regresion lineal,3.3,,,,False
+2026-09-20,824462,2026-09-20,Cincinnati Reds,695076,Rhett Lowder,1,0.6968947379749825,Regresion logistica,0.8,1.734685881971759,Regresion lineal,1.5,2.848037478355172,Regresion lineal,3.3,,,,False
+2026-09-20,824381,2026-09-20,Cleveland Guardians,668909,Gavin Williams,1,0.7620833575243746,Regresion logistica,0.7,1.0560036688483123,Regresion lineal,0.8,1.9393101524269136,Regresion lineal,1.8,,,,False
+2026-09-20,824381,2026-09-20,Athletics,678022,Jack Perkins,0,0.6786488941916368,Regresion logistica,0.6,1.753289466522598,Regresion lineal,2.7,2.964495025025522,Regresion lineal,3.8,,,,False
