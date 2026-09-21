@@ -13,3 +13,4 @@ timestamp,n_rows,modelo_1er_inning,brier_1er_inning,brier_1er_inning_baseline,mo
 2026-09-11T13:44:42,3868,Regresion logistica,0.2064,0.2242,Regresion lineal,1.402,1.4219,Gradient Boosting,1.8369,1.882
 2026-09-14T16:19:02,3956,Regresion logistica,0.2129,0.2307,Regresion lineal,1.411,1.4396,Regresion lineal,1.8641,1.9282
 2026-09-18T13:59:48,4063,Regresion logistica,0.214,0.2328,Regresion lineal,1.3924,1.4223,Regresion lineal,1.8556,1.9135
+2026-09-21T16:09:37,4156,Regresion logistica,0.2151,0.2364,Regresion lineal,1.3999,1.4225,Regresion lineal,1.854,1.91
