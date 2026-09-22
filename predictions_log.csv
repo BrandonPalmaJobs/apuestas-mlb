@@ -578,4 +578,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-20,824546,2026-09-20,Detroit Tigers,675512,Troy Melton,0,0.6972025087673569,Regresion logistica,0.6,1.5069692616588632,Regresion lineal,0.9,2.2991172531859103,Regresion lineal,1.5,,,,False
 2026-09-20,824546,2026-09-20,Chicago White Sox,663436,Davis Martin,1,0.7346145887481375,Regresion logistica,0.6,1.2152804596812452,Regresion lineal,2.1,1.9012312641451523,Regresion lineal,3.0,,,,False
 2026-09-20,822844,2026-09-20,Toronto Blue Jays,693686,Spencer Miles,0,0.7227274741299073,Regresion logistica,1.0,1.976997956936194,Regresion lineal,1.8571428571428568,2.697457164313437,Regresion lineal,3.4285714285714284,,,,False
-2026-09-20,822844,2026-09-20,Texas Rangers,594798,Jacob deGrom,1,0.742508577497533,Regresion logistica,0.7,1.3916950051215,Regresion lineal,1.6,1.9045866082719378,Regresion lineal,2.7,,,,False
+2026-09-20,822844,2026-09-20,Texas Rangers,594798,Jacob deGrom,1,0.742508577497533,Regresion logistica,0.7,1.3916950051215,Regresion lineal,1.6,1.9045866082719376,Regresion lineal,2.7,,,,False
+2026-09-22,824222,2026-09-22,Washington Nationals,683000,Riley Cornelio,0,,,,,,,,,,,,,False
+2026-09-22,824222,2026-09-22,Detroit Tigers,623454,Drew Anderson,1,0.8463747314647705,Regresion logistica,0.9,0.8172997084498308,Regresion lineal,0.7,1.7119693353566685,Regresion lineal,1.1,,,,False
