@@ -587,3 +587,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-22,823328,2026-09-22,Pittsburgh Pirates,683003,Jared Jones,1,0.7319993493924288,Regresion logistica,0.9,1.160509025028386,Regresion lineal,1.1,2.1250149808923764,Regresion lineal,2.7,,,,False
 2026-09-22,824709,2026-09-22,Cleveland Guardians,800048,Parker Messick,0,0.7138266779176213,Regresion logistica,0.8,1.346372339840972,Regresion lineal,0.6,2.490262846759391,Regresion lineal,1.4,,,,False
 2026-09-22,824709,2026-09-22,Boston Red Sox,801139,Payton Tolle,1,0.7933402882755323,Regresion logistica,0.6,0.6083002220790326,Regresion lineal,0.7,1.4814350147602149,Regresion lineal,1.4,,,,False
+2026-09-22,823494,2026-09-22,Tampa Bay Rays,656876,Drew Rasmussen,0,0.8225625672263865,Regresion logistica,1.0,1.2098384880743025,Regresion lineal,0.2,1.8437129480270065,Regresion lineal,1.1,,,,False
+2026-09-22,823494,2026-09-22,New York Yankees,608331,Max Fried,1,0.8830191280829766,Regresion logistica,0.8,0.6675755346549825,Regresion lineal,1.2,1.0441920298738654,Regresion lineal,1.5,,,,False
