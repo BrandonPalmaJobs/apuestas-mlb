@@ -583,3 +583,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-22,824222,2026-09-22,Detroit Tigers,623454,Drew Anderson,1,0.8463747314647705,Regresion logistica,0.9,0.8172997084498308,Regresion lineal,0.7,1.7119693353566685,Regresion lineal,1.1,,,,False
 2026-09-22,823412,2026-09-22,Milwaukee Brewers,669160,Dustin May,0,0.763052180363415,Regresion logistica,0.8,1.0864673902763875,Regresion lineal,1.4,1.981768603444896,Regresion lineal,2.1,,,,False
 2026-09-22,823412,2026-09-22,Philadelphia Phillies,554430,Zack Wheeler,1,0.8070515085295028,Regresion logistica,0.7,1.1044364748372728,Regresion lineal,1.8,2.1883745165618658,Regresion lineal,2.6,,,,False
+2026-09-22,823328,2026-09-22,St. Louis Cardinals,669467,Andre Pallante,0,0.6899304389152252,Regresion logistica,0.6,1.420643407011656,Regresion lineal,1.6,2.564624071493588,Regresion lineal,1.8,,,,False
+2026-09-22,823328,2026-09-22,Pittsburgh Pirates,683003,Jared Jones,1,0.7319993493924288,Regresion logistica,0.9,1.160509025028386,Regresion lineal,1.1,2.1250149808923764,Regresion lineal,2.7,,,,False
