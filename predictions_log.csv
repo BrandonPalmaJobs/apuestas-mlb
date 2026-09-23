@@ -595,3 +595,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-22,824624,2026-09-22,Chicago Cubs,684007,Shota Imanaga,1,0.7548442107191295,Regresion logistica,0.6,0.769996267840709,Regresion lineal,0.7,1.5728367046972007,Regresion lineal,1.9,,,,False
 2026-09-23,823410,2026-09-23,Milwaukee Brewers,701656,Logan Henderson,0,0.7456748594452721,Regresion logistica,0.9,0.9371831419288414,Regresion lineal,0.7,1.898100826165684,Regresion lineal,1.4,,,,False
 2026-09-23,823410,2026-09-23,Philadelphia Phillies,605400,Aaron Nola,1,0.7989931551740223,Regresion logistica,0.6,0.9801565886525092,Regresion lineal,1.0,1.949600109864982,Regresion lineal,1.0,,,,False
+2026-09-23,823327,2026-09-23,St. Louis Cardinals,669461,Matthew Liberatore,0,0.6786809600686585,Regresion logistica,0.7,1.3233306670959624,Regresion lineal,1.7,2.119011247480939,Regresion lineal,3.5,,,,False
+2026-09-23,823327,2026-09-23,Pittsburgh Pirates,669199,Lake Bachar,1,0.8389046754020789,Regresion logistica,0.7,0.9106530217033822,Regresion lineal,0.7,1.601107090004552,Regresion lineal,1.3,,,,False
