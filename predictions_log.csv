@@ -605,4 +605,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-23,824868,2026-09-23,Cincinnati Reds,671096,Andrew Abbott,0,0.6140487949826154,Regresion logistica,0.6,1.5635348058137406,Regresion lineal,2.6,2.6852135406491744,Regresion lineal,4.4,,,,False
 2026-09-23,824868,2026-09-23,Atlanta Braves,519242,Chris Sale,1,0.8125629839119143,Regresion logistica,0.9,0.928365034878068,Regresion lineal,1.1,1.8085509230310048,Regresion lineal,1.4,,,,False
 2026-09-24,824707,2026-09-24,Cleveland Guardians,682982,Daniel Espino,0,,,,,,,,,,,,,False
-2026-09-24,824707,2026-09-24,Boston Red Sox,624133,Ranger Suarez,1,0.8094180513269335,Regresion logistica,0.9,0.837348522288136,Regresion lineal,1.1,1.8387199448368479,Regresion lineal,2.3,,,,False
+2026-09-24,824707,2026-09-24,Boston Red Sox,624133,Ranger Suarez,1,0.8094180513269335,Regresion logistica,0.9,0.837348522288136,Regresion lineal,1.1,1.838719944836848,Regresion lineal,2.3,,,,False
+2026-09-24,823493,2026-09-24,Tampa Bay Rays,693855,Ian Seymour,0,0.678555614866161,Regresion logistica,0.7,1.7005003971685697,Regresion lineal,1.6,2.8849307461556077,Regresion lineal,3.1,,,,False
+2026-09-24,823493,2026-09-24,New York Yankees,693645,Cam Schlittler,1,0.8628310542046813,Regresion logistica,0.9,0.6145973020836852,Regresion lineal,0.6,1.1970881091305965,Regresion lineal,1.1,,,,False
