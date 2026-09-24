@@ -614,3 +614,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-24,824950,2026-09-24,Athletics,686930,Mason Barnett,1,0.4058108743454052,Regresion logistica,0.4,2.9554245488618927,Regresion lineal,2.0,4.419978581417811,Regresion lineal,4.8,,,,False
 2026-09-24,823087,2026-09-24,Los Angeles Angels,680570,Grayson Rodriguez,0,0.7171791020333129,Regresion logistica,0.6,1.1117280068925928,Regresion lineal,2.3,2.467746439563332,Regresion lineal,3.3,,,,False
 2026-09-24,823087,2026-09-24,Seattle Mariners,693433,Bryan Woo,1,0.8024879533083291,Regresion logistica,0.5,0.5792003640136181,Regresion lineal,1.6,1.4276376171881926,Regresion lineal,2.1,,,,False
+2026-09-24,823895,2026-09-24,San Diego Padres,601713,Nick Pivetta,0,0.8229474027653584,Regresion logistica,0.8571428571428571,1.270261550841993,Regresion lineal,1.2857142857142858,2.0791627582295864,Regresion lineal,2.2857142857142856,,,,False
+2026-09-24,823895,2026-09-24,Los Angeles Dodgers,607192,Tyler Glasnow,1,0.8289028013834642,Regresion logistica,0.8,0.7449405339366453,Regresion lineal,1.4,1.6355546594486041,Regresion lineal,2.1,,,,False
