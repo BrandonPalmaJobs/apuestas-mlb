@@ -603,4 +603,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-23,824710,2026-09-23,Cleveland Guardians,656492,Foster Griffin,0,0.6468064133504757,Regresion logistica,0.8,1.5657288499224016,Regresion lineal,2.5,3.029669274696414,Regresion lineal,3.1,,,,False
 2026-09-23,824710,2026-09-23,Boston Red Sox,543243,Sonny Gray,1,0.8042996343538243,Regresion logistica,0.7,0.782319782045107,Regresion lineal,1.5,2.0132660865325227,Regresion lineal,2.1,,,,False
 2026-09-23,824868,2026-09-23,Cincinnati Reds,671096,Andrew Abbott,0,0.6140487949826154,Regresion logistica,0.6,1.5635348058137406,Regresion lineal,2.6,2.6852135406491744,Regresion lineal,4.4,,,,False
-2026-09-23,824868,2026-09-23,Atlanta Braves,519242,Chris Sale,1,0.8125629839119143,Regresion logistica,0.9,0.9283650348780681,Regresion lineal,1.1,1.8085509230310046,Regresion lineal,1.4,,,,False
+2026-09-23,824868,2026-09-23,Atlanta Braves,519242,Chris Sale,1,0.8125629839119143,Regresion logistica,0.9,0.928365034878068,Regresion lineal,1.1,1.8085509230310048,Regresion lineal,1.4,,,,False
+2026-09-24,824707,2026-09-24,Cleveland Guardians,682982,Daniel Espino,0,,,,,,,,,,,,,False
+2026-09-24,824707,2026-09-24,Boston Red Sox,624133,Ranger Suarez,1,0.8094180513269335,Regresion logistica,0.9,0.837348522288136,Regresion lineal,1.1,1.8387199448368479,Regresion lineal,2.3,,,,False
