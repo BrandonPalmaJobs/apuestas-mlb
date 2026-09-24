@@ -611,4 +611,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-24,824866,2026-09-24,Cincinnati Reds,663903,Brady Singer,0,0.5753053950169925,Regresion logistica,0.6,2.018421238782794,Regresion lineal,1.9,3.252015973414752,Regresion lineal,5.0,,,,False
 2026-09-24,824866,2026-09-24,Atlanta Braves,641816,Tyler Mahle,1,0.7993822816720054,Regresion logistica,0.6,0.9072810164553792,Regresion lineal,0.8,1.883006232998842,Regresion lineal,1.1,,,,False
 2026-09-24,824950,2026-09-24,Houston Astros,663567,Peter Lambert,0,0.5907576101122315,Regresion logistica,0.6,1.9827342371901744,Regresion lineal,1.4,3.2029079656743056,Regresion lineal,3.5,,,,False
-2026-09-24,824950,2026-09-24,Athletics,686930,Mason Barnett,1,0.40581087434540525,Regresion logistica,0.4,2.9554245488618927,Regresion lineal,2.0,4.419978581417811,Regresion lineal,4.8,,,,False
+2026-09-24,824950,2026-09-24,Athletics,686930,Mason Barnett,1,0.4058108743454052,Regresion logistica,0.4,2.9554245488618927,Regresion lineal,2.0,4.419978581417811,Regresion lineal,4.8,,,,False
+2026-09-24,823087,2026-09-24,Los Angeles Angels,680570,Grayson Rodriguez,0,0.7171791020333129,Regresion logistica,0.6,1.1117280068925928,Regresion lineal,2.3,2.467746439563332,Regresion lineal,3.3,,,,False
+2026-09-24,823087,2026-09-24,Seattle Mariners,693433,Bryan Woo,1,0.8024879533083291,Regresion logistica,0.5,0.5792003640136181,Regresion lineal,1.6,1.4276376171881926,Regresion lineal,2.1,,,,False
