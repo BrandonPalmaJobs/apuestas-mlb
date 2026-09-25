@@ -624,4 +624,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-25,824544,2026-09-25,Colorado Rockies,608372,Tomoyuki Sugano,0,0.6692988754567706,Regresion logistica,0.6,1.4065986145708278,Regresion lineal,3.3,2.8529838891790376,Regresion lineal,3.9,,,,False
 2026-09-25,824544,2026-09-25,Chicago White Sox,680732,Sean Burke,1,0.7653730267839045,Regresion logistica,0.8,1.063126181203221,Regresion lineal,1.6,2.2508507863125544,Regresion lineal,2.3,,,,False
 2026-09-25,824058,2026-09-25,Cleveland Guardians,668909,Gavin Williams,0,0.8019465358441132,Regresion logistica,0.7,1.296224087589376,Regresion lineal,0.8,2.140865360305878,Regresion lineal,1.8,,,,False
-2026-09-25,824058,2026-09-25,Kansas City Royals,702070,Noah Cameron,1,0.806038092934715,Regresion logistica,0.9,0.9218723484020833,Regresion lineal,0.8,1.7112564355147315,Regresion lineal,1.2,,,,False
+2026-09-25,824058,2026-09-25,Kansas City Royals,702070,Noah Cameron,1,0.806038092934715,Regresion logistica,0.9,0.9218723484020832,Regresion lineal,0.8,1.7112564355147315,Regresion lineal,1.2,,,,False
+2026-09-25,823735,2026-09-25,Milwaukee Brewers,688107,Robert Gasser,1,0.7511375110347571,Regresion logistica,0.8,1.0399540290369556,Regresion lineal,0.8,1.9902838499399096,Regresion lineal,1.7,,,,False
+2026-09-25,823735,2026-09-25,St. Louis Cardinals,700241,Michael McGreevy,0,0.6523724741986466,Regresion logistica,0.5,1.5039664789883926,Regresion lineal,2.6,2.67796318864039,Regresion lineal,3.2,,,,False
