@@ -629,3 +629,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-25,823735,2026-09-25,St. Louis Cardinals,700241,Michael McGreevy,0,0.6523724741986466,Regresion logistica,0.5,1.5039664789883926,Regresion lineal,2.6,2.67796318864039,Regresion lineal,3.2,,,,False
 2026-09-25,823085,2026-09-25,Los Angeles Angels,672282,Reid Detmers,0,0.741790723833629,Regresion logistica,0.9,0.9388537375443438,Regresion lineal,0.3,1.550119548441356,Regresion lineal,1.5,,,,False
 2026-09-25,823085,2026-09-25,Seattle Mariners,682243,Bryce Miller,1,0.7042825158211078,Regresion logistica,0.5,1.250496426846443,Regresion lineal,2.1,2.3638539490021886,Regresion lineal,3.9,,,,False
+2026-09-25,823167,2026-09-25,Los Angeles Dodgers,669373,Tarik Skubal,0,0.707780988070334,Regresion logistica,0.7,1.1529305568726391,Regresion lineal,1.4,1.9316473825215648,Regresion lineal,1.8,,,,False
+2026-09-25,823167,2026-09-25,San Francisco Giants,805074,Yunior Marte,1,,,,,,,,,,,,,False
