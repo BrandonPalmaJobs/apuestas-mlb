@@ -615,4 +615,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-24,823087,2026-09-24,Los Angeles Angels,680570,Grayson Rodriguez,0,0.7171791020333129,Regresion logistica,0.6,1.1117280068925928,Regresion lineal,2.3,2.467746439563332,Regresion lineal,3.3,,,,False
 2026-09-24,823087,2026-09-24,Seattle Mariners,693433,Bryan Woo,1,0.8024879533083291,Regresion logistica,0.5,0.5792003640136181,Regresion lineal,1.6,1.4276376171881926,Regresion lineal,2.1,,,,False
 2026-09-24,823895,2026-09-24,San Diego Padres,601713,Nick Pivetta,0,0.8229474027653584,Regresion logistica,0.8571428571428571,1.270261550841993,Regresion lineal,1.2857142857142858,2.0791627582295864,Regresion lineal,2.2857142857142856,,,,False
-2026-09-24,823895,2026-09-24,Los Angeles Dodgers,607192,Tyler Glasnow,1,0.8289028013834642,Regresion logistica,0.8,0.7449405339366453,Regresion lineal,1.4,1.6355546594486041,Regresion lineal,2.1,,,,False
+2026-09-24,823895,2026-09-24,Los Angeles Dodgers,607192,Tyler Glasnow,1,0.8289028013834642,Regresion logistica,0.8,0.7449405339366453,Regresion lineal,1.4,1.635554659448604,Regresion lineal,2.1,,,,False
+2026-09-25,823491,2026-09-25,Baltimore Orioles,669432,Trevor Rogers,0,0.7314027216589923,Regresion logistica,1.0,1.6630824882695805,Regresion lineal,1.3,2.680641670639172,Regresion lineal,2.4,,,,False
+2026-09-25,823491,2026-09-25,New York Yankees,694341,Brendan Beck,1,,,,,,,,,,,,,False
