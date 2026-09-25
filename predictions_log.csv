@@ -620,3 +620,4 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-25,823491,2026-09-25,New York Yankees,694341,Brendan Beck,1,,,,,,,,,,,,,False
 2026-09-25,824706,2026-09-25,Chicago Cubs,656849,David Peterson,0,0.6985896273577697,Regresion logistica,0.6,1.624062708925989,Regresion lineal,0.8,2.848800266843218,Regresion lineal,1.9,,,,False
 2026-09-25,824706,2026-09-25,Boston Red Sox,678394,Brayan Bello,1,0.6694805334812786,Regresion logistica,0.5,1.7847253457041012,Regresion lineal,2.5,3.3159440153556647,Regresion lineal,4.8,,,,False
+2026-09-25,823409,2026-09-25,Tampa Bay Rays,642547,Freddy Peralta,0,0.7098289240517558,Regresion logistica,0.5,1.396624325650011,Regresion lineal,1.4,2.527530387337807,Regresion lineal,2.4,,,,False
