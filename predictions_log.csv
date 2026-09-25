@@ -631,3 +631,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-25,823085,2026-09-25,Seattle Mariners,682243,Bryce Miller,1,0.7042825158211078,Regresion logistica,0.5,1.250496426846443,Regresion lineal,2.1,2.3638539490021886,Regresion lineal,3.9,,,,False
 2026-09-25,823167,2026-09-25,Los Angeles Dodgers,669373,Tarik Skubal,0,0.707780988070334,Regresion logistica,0.7,1.1529305568726391,Regresion lineal,1.4,1.9316473825215648,Regresion lineal,1.8,,,,False
 2026-09-25,823167,2026-09-25,San Francisco Giants,805074,Yunior Marte,1,,,,,,,,,,,,,False
+2026-09-25,823652,2026-09-25,Texas Rangers,594798,Jacob deGrom,0,0.7667423842059643,Regresion logistica,0.6,1.253115028086426,Regresion lineal,1.7,2.3334230678791994,Regresion lineal,2.9,,,,False
+2026-09-25,823652,2026-09-25,Minnesota Twins,657746,Joe Ryan,1,0.7432203771705903,Regresion logistica,0.6,1.0251143106695189,Regresion lineal,2.1,2.068405311788979,Regresion lineal,4.1,,,,False
