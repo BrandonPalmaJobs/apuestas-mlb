@@ -635,3 +635,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-25,823652,2026-09-25,Minnesota Twins,657746,Joe Ryan,1,0.7432203771705903,Regresion logistica,0.6,1.0251143106695189,Regresion lineal,2.1,2.068405311788979,Regresion lineal,4.1,,,,False
 2026-09-25,824947,2026-09-25,Houston Astros,686613,Hunter Brown,0,0.6852511218561159,Regresion logistica,0.9,1.9519323032984368,Regresion lineal,1.0,3.084365332384136,Regresion lineal,1.5,,,,False
 2026-09-25,824947,2026-09-25,Athletics,682052,Jacob Lopez,1,0.7062936412781967,Regresion logistica,0.7,1.7767539563395878,Regresion lineal,2.1,3.0233498113212107,Regresion lineal,2.9,,,,False
+2026-09-26,823245,2026-09-26,Arizona Diamondbacks,593958,Eduardo Rodriguez,0,0.7570486937365555,Regresion logistica,0.4,1.1593710597419302,Regresion lineal,2.0,1.9930950932542992,Regresion lineal,2.5,,,,False
+2026-09-26,823245,2026-09-26,San Diego Padres,621111,Walker Buehler,1,0.8404087733221492,Regresion logistica,0.8,0.8619460430910607,Regresion lineal,1.4,1.7069589459077052,Regresion lineal,1.5,,,,False
