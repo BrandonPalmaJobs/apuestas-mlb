@@ -637,3 +637,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-25,824947,2026-09-25,Athletics,682052,Jacob Lopez,1,0.7062936412781967,Regresion logistica,0.7,1.7767539563395878,Regresion lineal,2.1,3.0233498113212107,Regresion lineal,2.9,,,,False
 2026-09-26,823245,2026-09-26,Arizona Diamondbacks,593958,Eduardo Rodriguez,0,0.7570486937365555,Regresion logistica,0.4,1.1593710597419302,Regresion lineal,2.0,1.9930950932542992,Regresion lineal,2.5,,,,False
 2026-09-26,823245,2026-09-26,San Diego Padres,621111,Walker Buehler,1,0.8404087733221492,Regresion logistica,0.8,0.8619460430910607,Regresion lineal,1.4,1.7069589459077052,Regresion lineal,1.5,,,,False
+2026-09-26,824543,2026-09-26,Chicago White Sox,663436,Davis Martin,1,0.7386026462422274,Regresion logistica,0.6,1.1414636370575066,Regresion lineal,1.9,2.211454856194253,Regresion lineal,2.8,,,,False
+2026-09-26,824543,2026-09-26,Colorado Rockies,500779,Jose Quintana,0,0.7183350063635017,Regresion logistica,0.6,1.4364850288781512,Regresion lineal,2.5,2.8239269885001645,Regresion lineal,2.9,,,,False
