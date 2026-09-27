@@ -649,3 +649,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-27,822761,2026-09-27,Toronto Blue Jays,453286,Max Scherzer,1,0.7012785548681958,Regresion logistica,0.4,0.9845005112324284,Regresion lineal,1.6,1.9149424747628527,Regresion lineal,2.5,,,,False
 2026-09-27,824217,2026-09-27,Pittsburgh Pirates,683003,Jared Jones,0,0.7487576095576916,Regresion logistica,0.9,1.1900692759042442,Regresion lineal,1.1,2.1065650979850847,Regresion lineal,2.7,,,,False
 2026-09-27,824217,2026-09-27,Detroit Tigers,689981,River Ryan,1,,,,,,,,,,,,,False
+2026-09-27,824055,2026-09-27,Cleveland Guardians,800048,Parker Messick,0,0.7635884749597012,Regresion logistica,0.8,1.193635751360466,Regresion lineal,0.7,2.097010328947989,Regresion lineal,1.4,,,,False
+2026-09-27,824055,2026-09-27,Kansas City Royals,663738,Daniel Lynch IV,1,0.7229535076018022,Regresion logistica,0.5555555555555556,1.4099698231222029,Regresion lineal,2.4444444444444446,2.5350244658884615,Regresion lineal,3.5555555555555554,,,,False
