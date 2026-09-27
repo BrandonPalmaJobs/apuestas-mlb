@@ -653,3 +653,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-27,824055,2026-09-27,Kansas City Royals,663738,Daniel Lynch IV,1,0.7229535076018022,Regresion logistica,0.5555555555555556,1.4099698231222029,Regresion lineal,2.4444444444444446,2.535024465888461,Regresion lineal,3.555555555555556,,,,False
 2026-09-27,823731,2026-09-27,St. Louis Cardinals,669467,Andre Pallante,0,0.685942805184962,Regresion logistica,0.6,1.373560523581658,Regresion lineal,1.0,2.316007246862893,Regresion lineal,1.2,,,,False
 2026-09-27,823731,2026-09-27,Milwaukee Brewers,694819,Jacob Misiorowski,1,0.8068570919995369,Regresion logistica,0.8,0.7066078318338124,Regresion lineal,0.9,1.2881399900379782,Regresion lineal,1.3,,,,False
+2026-09-27,823164,2026-09-27,Los Angeles Dodgers,676263,Jack Dreyer,0,,,,,,,,,,,,,False
+2026-09-27,823164,2026-09-27,San Francisco Giants,693313,Carson Seymour,1,,,,,,,,,,,,,False
