@@ -650,4 +650,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-27,824217,2026-09-27,Pittsburgh Pirates,683003,Jared Jones,0,0.7487576095576916,Regresion logistica,0.9,1.1900692759042442,Regresion lineal,1.1,2.1065650979850847,Regresion lineal,2.7,,,,False
 2026-09-27,824217,2026-09-27,Detroit Tigers,689981,River Ryan,1,,,,,,,,,,,,,False
 2026-09-27,824055,2026-09-27,Cleveland Guardians,800048,Parker Messick,0,0.7635884749597012,Regresion logistica,0.8,1.193635751360466,Regresion lineal,0.7,2.097010328947989,Regresion lineal,1.4,,,,False
-2026-09-27,824055,2026-09-27,Kansas City Royals,663738,Daniel Lynch IV,1,0.7229535076018022,Regresion logistica,0.5555555555555556,1.4099698231222029,Regresion lineal,2.4444444444444446,2.5350244658884615,Regresion lineal,3.5555555555555554,,,,False
+2026-09-27,824055,2026-09-27,Kansas City Royals,663738,Daniel Lynch IV,1,0.7229535076018022,Regresion logistica,0.5555555555555556,1.4099698231222029,Regresion lineal,2.4444444444444446,2.535024465888461,Regresion lineal,3.555555555555556,,,,False
+2026-09-27,823731,2026-09-27,St. Louis Cardinals,669467,Andre Pallante,0,0.685942805184962,Regresion logistica,0.6,1.373560523581658,Regresion lineal,1.0,2.316007246862893,Regresion lineal,1.2,,,,False
+2026-09-27,823731,2026-09-27,Milwaukee Brewers,694819,Jacob Misiorowski,1,0.8068570919995369,Regresion logistica,0.8,0.7066078318338124,Regresion lineal,0.9,1.2881399900379782,Regresion lineal,1.3,,,,False
