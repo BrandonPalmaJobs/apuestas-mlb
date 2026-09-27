@@ -639,3 +639,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-26,823245,2026-09-26,San Diego Padres,621111,Walker Buehler,1,0.8404087733221492,Regresion logistica,0.8,0.8619460430910607,Regresion lineal,1.4,1.7069589459077052,Regresion lineal,1.5,,,,False
 2026-09-26,824543,2026-09-26,Chicago White Sox,663436,Davis Martin,1,0.7386026462422274,Regresion logistica,0.6,1.1414636370575066,Regresion lineal,1.9,2.211454856194253,Regresion lineal,2.8,,,,False
 2026-09-26,824543,2026-09-26,Colorado Rockies,500779,Jose Quintana,0,0.7183350063635017,Regresion logistica,0.6,1.4364850288781512,Regresion lineal,2.5,2.8239269885001645,Regresion lineal,2.9,,,,False
+2026-09-27,824948,2026-09-27,Houston Astros,663567,Peter Lambert,0,0.6318714355823184,Regresion logistica,0.6,1.890694352269365,Regresion lineal,1.4,3.221917062862486,Regresion lineal,3.5,,,,False
+2026-09-27,824948,2026-09-27,Athletics,686751,Seth Johnson,1,,,,,,,,,,,,,False
