@@ -1,20 +1,20 @@
 [
   {
     "modelo": "Baseline constante (tasa historica)",
-    "accuracy": 0.466,
+    "accuracy": 0.4434,
     "auc": 0.5,
-    "brier": 0.2502
+    "brier": 0.251
   },
   {
     "modelo": "Regresion logistica",
-    "accuracy": 0.4369,
-    "auc": 0.378,
-    "brier": 0.3283
+    "accuracy": 0.4623,
+    "auc": 0.3938,
+    "brier": 0.3241
   },
   {
     "modelo": "Gradient Boosting",
-    "accuracy": 0.5146,
-    "auc": 0.525,
-    "brier": 0.2868
+    "accuracy": 0.5189,
+    "auc": 0.4793,
+    "brier": 0.3027
   }
 ]
