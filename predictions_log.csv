@@ -655,3 +655,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-09-27,823731,2026-09-27,Milwaukee Brewers,694819,Jacob Misiorowski,1,0.8068570919995369,Regresion logistica,0.8,0.7066078318338124,Regresion lineal,0.9,1.2881399900379782,Regresion lineal,1.3,,,,False
 2026-09-27,823164,2026-09-27,Los Angeles Dodgers,676263,Jack Dreyer,0,,,,,,,,,,,,,False
 2026-09-27,823164,2026-09-27,San Francisco Giants,693313,Carson Seymour,1,,,,,,,,,,,,,False
+2026-10-02,849829,2026-10-03,Chicago White Sox,696146,Hagen Smith,0,,,,,,,,,,,,,False
+2026-10-02,849829,2026-10-03,Cleveland Guardians,800048,Parker Messick,1,0.8719738466203812,Regresion logistica,0.7,1.0386676053066697,Regresion lineal,0.8,1.9362361064456546,Regresion lineal,1.4,,,,False
