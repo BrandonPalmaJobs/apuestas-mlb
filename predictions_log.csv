@@ -658,4 +658,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-10-02,849829,2026-10-03,Chicago White Sox,696146,Hagen Smith,0,,,,,,,,,,,,,False
 2026-10-02,849829,2026-10-03,Cleveland Guardians,800048,Parker Messick,1,0.8719738466203812,Regresion logistica,0.7,1.0386676053066697,Regresion lineal,0.8,1.9362361064456544,Regresion lineal,1.4,,,,False
 2026-10-03,849835,2026-10-03,New York Yankees,543037,Gerrit Cole,0,0.7398035097757346,Regresion logistica,0.8,1.4862493594680175,Regresion lineal,1.1,2.273000832900507,Regresion lineal,1.8,,,,False
-2026-10-03,849835,2026-10-03,Tampa Bay Rays,656876,Drew Rasmussen,1,0.8521898189623857,Regresion logistica,1.0,1.0227219362455173,Regresion lineal,0.2,1.6139907087783611,Regresion lineal,1.1,,,,False
+2026-10-03,849835,2026-10-03,Tampa Bay Rays,656876,Drew Rasmussen,1,0.8521898189623857,Regresion logistica,1.0,1.022721936245517,Regresion lineal,0.2,1.6139907087783611,Regresion lineal,1.1,,,,False
+2026-10-03,849828,2026-10-03,Atlanta Braves,689266,Dylan Dodd,0,,,,,,,,,,,,,False
+2026-10-03,849828,2026-10-03,Los Angeles Dodgers,669373,Tarik Skubal,1,0.7970807920690464,Regresion logistica,0.7,0.868697595716357,Regresion lineal,1.4,1.7019429742295396,Regresion lineal,1.8,,,,False
