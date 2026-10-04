@@ -663,3 +663,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-10-03,849828,2026-10-03,Los Angeles Dodgers,669373,Tarik Skubal,1,0.7970807920690464,Regresion logistica,0.7,0.868697595716357,Regresion lineal,1.4,1.7019429742295396,Regresion lineal,1.8,,,,False
 2026-10-03,849830,2026-10-03,San Diego Padres,592662,Robbie Ray,0,0.7196244419786246,Regresion logistica,0.8,1.3391388403216262,Regresion lineal,1.3,2.3391587166167143,Regresion lineal,2.1,,,,False
 2026-10-03,849830,2026-10-03,Milwaukee Brewers,694819,Jacob Misiorowski,1,0.8534828393186578,Regresion logistica,0.8,0.6037665635445807,Regresion lineal,0.9,1.538731052458279,Regresion lineal,1.2,,,,False
+2026-10-04,849825,2026-10-04,San Diego Padres,650633,Michael King,0,0.7581636834079991,Regresion logistica,0.8,1.2808506619378583,Regresion lineal,1.2,2.485095265357157,Regresion lineal,1.8,,,,False
+2026-10-04,849825,2026-10-04,Milwaukee Brewers,701656,Logan Henderson,1,0.8024868451020036,Regresion logistica,0.9,0.7550132370687674,Regresion lineal,0.7,1.782742147331839,Regresion lineal,1.3,,,,False
