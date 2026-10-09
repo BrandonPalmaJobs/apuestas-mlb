@@ -8,13 +8,13 @@
   {
     "modelo": "Regresion logistica",
     "accuracy": 0.475,
-    "auc": 0.4808,
-    "brier": 0.2951
+    "auc": 0.4764,
+    "brier": 0.2964
   },
   {
     "modelo": "Gradient Boosting",
-    "accuracy": 0.4625,
-    "auc": 0.4375,
-    "brier": 0.3122
+    "accuracy": 0.45,
+    "auc": 0.4293,
+    "brier": 0.3171
   }
 ]
