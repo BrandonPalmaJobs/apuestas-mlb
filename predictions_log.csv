@@ -670,5 +670,7 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-10-04,849823,2026-10-04,Atlanta Braves,678061,Ray Kerr,0,,,,,,,,,,,,,False
 2026-10-05,849834,2026-10-05,Chicago White Sox,641743,Anthony Kay,0,0.7016081803141332,Regresion logistica,0.8,1.4484531295474892,Regresion lineal,1.1,2.282079514825816,Regresion lineal,3.2,,,,False
 2026-10-05,849834,2026-10-05,Cleveland Guardians,668909,Gavin Williams,1,0.8118087504260322,Regresion logistica,0.7,1.1560041066068192,Regresion lineal,1.0,1.9769159849954328,Regresion lineal,2.1,,,,False
-2026-10-05,849839,2026-10-05,New York Yankees,693645,Cam Schlittler,0,0.8162587012694299,Regresion logistica,0.9,1.2893054121686789,Regresion lineal,0.8,1.9714825483516116,Regresion lineal,1.4,,,,False
+2026-10-05,849839,2026-10-05,New York Yankees,693645,Cam Schlittler,0,0.8162587012694299,Regresion logistica,0.9,1.2893054121686789,Regresion lineal,0.8,1.971482548351612,Regresion lineal,1.4,,,,False
 2026-10-05,849839,2026-10-05,Tampa Bay Rays,642547,Freddy Peralta,1,0.784580499150768,Regresion logistica,0.5,1.0160094191538462,Regresion lineal,1.2,1.9065093394782453,Regresion lineal,2.1,,,,False
+2026-10-10,849831,2026-10-10,Chicago White Sox,680732,Sean Burke,0,0.7409860195800932,Regresion logistica,0.8,1.5244258827794048,Regresion lineal,1.7,2.2372356955420907,Regresion lineal,2.4,,,,False
+2026-10-10,849831,2026-10-10,Cleveland Guardians,668909,Gavin Williams,1,0.7720579147821899,Regresion logistica,0.7,1.2871817446944682,Regresion lineal,1.0,1.9823786252044306,Regresion lineal,2.1,,,,False
