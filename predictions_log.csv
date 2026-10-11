@@ -673,4 +673,6 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-10-05,849839,2026-10-05,New York Yankees,693645,Cam Schlittler,0,0.8162587012694299,Regresion logistica,0.9,1.2893054121686789,Regresion lineal,0.8,1.971482548351612,Regresion lineal,1.4,,,,False
 2026-10-05,849839,2026-10-05,Tampa Bay Rays,642547,Freddy Peralta,1,0.784580499150768,Regresion logistica,0.5,1.0160094191538462,Regresion lineal,1.2,1.9065093394782453,Regresion lineal,2.1,,,,False
 2026-10-10,849831,2026-10-10,Chicago White Sox,680732,Sean Burke,0,0.7409860195800932,Regresion logistica,0.8,1.5244258827794048,Regresion lineal,1.7,2.2372356955420907,Regresion lineal,2.4,,,,False
-2026-10-10,849831,2026-10-10,Cleveland Guardians,668909,Gavin Williams,1,0.7720579147821899,Regresion logistica,0.7,1.2871817446944682,Regresion lineal,1.0,1.9823786252044306,Regresion lineal,2.1,,,,False
+2026-10-10,849831,2026-10-10,Cleveland Guardians,668909,Gavin Williams,1,0.7720579147821899,Regresion logistica,0.7,1.2871817446944682,Regresion lineal,1.0,1.9823786252044304,Regresion lineal,2.1,,,,False
+2026-10-11,849809,2026-10-11,Los Angeles Dodgers,669373,Tarik Skubal,0,0.788964770842024,Regresion logistica,0.7,0.8607784903285488,Regresion lineal,1.4,1.566891034354344,Regresion lineal,1.8,,,,False
+2026-10-11,849809,2026-10-11,Milwaukee Brewers,694819,Jacob Misiorowski,1,0.852861166704157,Regresion logistica,0.8,0.7314565881451078,Regresion lineal,0.9,1.5926100538206844,Regresion lineal,1.2,,,,False
