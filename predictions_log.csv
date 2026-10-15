@@ -680,3 +680,5 @@ logged_date,gamePk,game_date,team_name,pitcher_id,pitcher_name,is_home,pred_prob
 2026-10-12,849812,2026-10-12,Milwaukee Brewers,701656,Logan Henderson,1,0.8325052192073615,Regresion logistica,0.9,0.8810436120019713,Regresion lineal,0.7,1.7720365236229054,Regresion lineal,1.3,,,,False
 2026-10-12,849820,2026-10-12,Cleveland Guardians,656492,Foster Griffin,0,0.7130612717651128,Regresion logistica,0.8,1.305512442769369,Regresion lineal,2.3,2.1237618208787308,Regresion lineal,2.9,,,,False
 2026-10-12,849820,2026-10-12,Tampa Bay Rays,656876,Drew Rasmussen,1,0.8245513132192502,Regresion logistica,1.0,0.9159091775735406,Regresion lineal,0.2,1.4541866842329487,Regresion lineal,1.1,,,,False
+2026-10-15,849810,2026-10-15,Los Angeles Dodgers,607192,Tyler Glasnow,1,0.8155644764039032,Regresion logistica,0.8,0.9060589839684868,Regresion lineal,1.1,1.7102255582846428,Regresion lineal,1.7,,,,False
+2026-10-15,849810,2026-10-15,Milwaukee Brewers,675660,Shane Drohan,0,0.6764168121343456,Regresion logistica,0.8,1.5929658568276803,Regresion lineal,1.8,2.5168641817904365,Regresion lineal,3.1,,,,False
