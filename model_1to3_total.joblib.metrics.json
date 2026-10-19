@@ -13,8 +13,8 @@
   },
   {
     "modelo": "Gradient Boosting",
-    "accuracy": 0.5094,
-    "auc": 0.5455,
-    "brier": 0.277
+    "accuracy": 0.5377,
+    "auc": 0.5287,
+    "brier": 0.2775
   }
 ]
