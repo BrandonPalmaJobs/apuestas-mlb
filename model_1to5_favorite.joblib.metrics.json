@@ -8,7 +8,7 @@
   {
     "modelo": "Regresion logistica",
     "accuracy": 0.4494,
-    "auc": 0.4277,
+    "auc": 0.4287,
     "brier": 0.3315
   },
   {
