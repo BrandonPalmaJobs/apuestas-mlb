@@ -1,20 +1,20 @@
 [
   {
     "modelo": "Baseline ingenuo (tasa trailing)",
-    "accuracy": 0.6655,
-    "auc": 0.5389,
-    "brier": 0.2322
+    "accuracy": 0.6678,
+    "auc": 0.5403,
+    "brier": 0.2308
   },
   {
     "modelo": "Regresion logistica",
-    "accuracy": 0.692,
-    "auc": 0.5836,
-    "brier": 0.2103
+    "accuracy": 0.6897,
+    "auc": 0.585,
+    "brier": 0.2094
   },
   {
     "modelo": "Gradient Boosting",
-    "accuracy": 0.692,
-    "auc": 0.5727,
-    "brier": 0.2118
+    "accuracy": 0.6966,
+    "auc": 0.5678,
+    "brier": 0.2107
   }
 ]
