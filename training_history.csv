@@ -28,3 +28,4 @@ timestamp,n_rows,modelo_1er_inning,brier_1er_inning,brier_1er_inning_baseline,mo
 2026-11-02T19:48:46,4349,Regresion logistica,0.2112,0.234,Regresion lineal,1.4268,1.4676,Regresion lineal,1.8691,1.9316
 2026-11-06T17:16:50,4349,Regresion logistica,0.2093,0.2314,Regresion lineal,1.4232,1.4606,Regresion lineal,1.8761,1.9412
 2026-11-09T20:10:19,4349,Regresion logistica,0.2094,0.2313,Regresion lineal,1.418,1.4547,Regresion lineal,1.8692,1.9315
+2026-11-13T17:26:00,4349,Regresion logistica,0.2093,0.231,Regresion lineal,1.4261,1.4657,Regresion lineal,1.8752,1.9405
